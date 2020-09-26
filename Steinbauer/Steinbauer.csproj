@@ -26,4 +26,13 @@
         <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <TypeScriptCompile Include="wwwroot\ts\main.ts" />
+      <TypeScriptCompile Include="wwwroot\ts\storecustomer.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ClientApp" />
+    </ItemGroup>
+
 </Project>

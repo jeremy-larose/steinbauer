@@ -26,21 +26,6 @@ namespace Steinbauer.Controllers
             _context = context;
             _logger = logger;
             _mapper = mapper;
-
-            if (!_context.Vehicles.Any())
-            {
-                _context.Vehicles.Add(new Vehicle()
-                {
-                    Id = 0,
-                    VehicleType = VehicleType.Compact,
-                    EngineRunning = false,
-                    ImageFile = "null",
-                    LastRan = DateTime.Today,
-                    Name = "FirstVehicle",
-                    Speed = 0
-                });
-                _context.SaveChanges();
-            }
         }
 
         [HttpGet]

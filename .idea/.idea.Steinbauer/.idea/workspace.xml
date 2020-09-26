@@ -8,22 +8,58 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2c63f2-99ee-4d4f-a8f9-cfc9eedf4c33" name="Default Changelist" comment="Initial Commit">
+    <list default="true" id="0e2c63f2-99ee-4d4f-a8f9-cfc9eedf4c33" name="Default Changelist" comment="Initial API Functionality Added">
+      <change afterPath="$PROJECT_DIR$/Steinbauer/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/steinbauer-app/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/wwwroot/ts/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Steinbauer/wwwroot/ts/storecustomer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Controllers/VehicleModsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Controllers/VehicleModsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Data/ISteinbauerRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Data/ISteinbauerRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Services/DataGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Services/DataGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ViewModels/ModificationViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ViewModels/ModificationViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ViewModels/VehicleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ViewModels/VehicleViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Steinbauer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Steinbauer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Views/Home/Browse.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Views/Home/Browse.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="JSON File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,17 +97,31 @@
         <option value="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/Services/DataGenerator.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/Data/ISteinbauerRepository.cs" />
-        <option value="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/ViewModels/VehicleViewModel.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/ViewModels/ModificationViewModel.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/Controllers/VehicleModsController.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/vehiclecustomer.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/test.tsx" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/storecustomer.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/ts.config.json" />
+        <option value="$PROJECT_DIR$/Steinbauer/tsconfig.json" />
+        <option value="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/main.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/Views/Home/Browse.cshtml" />
+        <option value="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/index.html" />
+        <option value="$PROJECT_DIR$/Steinbauer/steinbauer-app/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/steinbauer-app/angular.json" />
+        <option value="$PROJECT_DIR$/Steinbauer/steinbauer-app/tsconfig.app.json" />
+        <option value="$PROJECT_DIR$/Steinbauer/package.json" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1hyvYozPK9lOveKMfxQwOKhjSQe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -82,7 +132,9 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="C:\Users\jerem\RiderProjects\Steinbauer\Steinbauer\steinbauer-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Steinbauer">
@@ -126,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600996197217</updated>
       <workItem from="1600996200079" duration="47388000" />
-      <workItem from="1601136641031" duration="9253000" />
+      <workItem from="1601136641031" duration="13471000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1601137051694</created>
@@ -135,11 +187,26 @@
       <option name="project" value="LOCAL" />
       <updated>1601137051694</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial API Functionality Added">
+      <created>1601148454211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601148454211</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/main.js.map" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/main.js" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/storecustomer.js" />
+        <option value="$PROJECT_DIR$/Steinbauer/wwwroot/ts/storecustomer.js.map" />
+      </list>
+    </option>
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -158,29 +225,30 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Initial API Functionality Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial API Functionality Added" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1601148183693">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1601152570839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304808" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601148183693" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1601148183693">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601152570839" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1601152570839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304807" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601148183693" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1601148183693">
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601152570839" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1601152570839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304807" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601148183693" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1601148183693">
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601152570839" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1601152570839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304807" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601148183693" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601152570839" />
     <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1601143492564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,10 +321,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="754" y="221" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601009311101" />
-    <state x="491" y="164" key="SettingsEditor" timestamp="1601131873245">
+    <state x="491" y="164" key="SettingsEditor" timestamp="1601149675433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="491" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601131873245" />
+    <state x="491" y="164" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601149675433" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1601145624895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
