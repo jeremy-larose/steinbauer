@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Steinbauer.Data;
@@ -39,7 +35,7 @@ namespace Steinbauer.Controllers
         
         public IActionResult Browse()
         {
-            var results = _repository.GetAllVehicles();
+            var results = _repository.GetAllVehicles( true );
             
             return View( results );
         }

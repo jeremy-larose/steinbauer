@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Steinbauer.Data.Entities;
 
@@ -17,21 +18,46 @@ namespace Steinbauer.Data
             _logger = logger;
         }
 
-        public IEnumerable<Vehicle> GetAllVehicles()
+        public IEnumerable<Vehicle> GetAllVehicles( bool includeMods )
         {
-            try
+            if ( includeMods )
             {
                 return _dbContext.Vehicles
                     .OrderBy(v => v.Id)
+                    .Include(v => v.Modifications)
                     .ToList();
             }
-            catch (Exception ex)
+            else
             {
-                _logger.LogError( $"Failed to get all products: {ex}" );
-                return null;
+                return _dbContext.Vehicles
+                    .OrderBy( v=>v.Id )
+                    .ToList();
             }
         }
 
+        public IEnumerable<Modification> GetAllModifications( int vehicleId )
+        {
+            try
+            {
+                var vehicle = GetVehicleById(vehicleId);
+                if (vehicle != null)
+                {
+                    return _dbContext.Vehicles.Find(vehicleId).Modifications.ToList();
+                }
+                else
+                {
+                    _logger.LogError( "GetAllModifications for null vehicle.");
+                    return null;
+                }
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Failed to get all modifications: {e}");
+                return null;
+            }
+        }
+        
         public IEnumerable<Vehicle> GetVehiclesByType(VehicleType vehicleType)
         {
             return _dbContext.Vehicles
@@ -41,35 +67,20 @@ namespace Steinbauer.Data
 
         public Vehicle GetVehicleById(int id)
         {
-            return _dbContext.Vehicles.Where(v => v.Id == id).FirstOrDefault();
+            return _dbContext.Vehicles
+                .Include(v => v.Modifications)
+                .FirstOrDefault(v => v.Id == id);
         }
 
-        public IEnumerable<Modification> GetModificationById(int id)
+        public Modification GetModificationById(int modId)
         {
             return _dbContext.Modifications
-                .Where(m => m.Id == id)
-                .ToList();
-        }
-
-        public IEnumerable<Modification> GetAllModifications()
-        {
-            try
-            {
-                return _dbContext.Modifications
-                    .OrderBy(v => v.Id)
-                    .ToList();
-            }
-            catch (Exception e)
-            {
-                _logger.LogError($"Failed to get all modifications: {e}");
-                return null;
-            }
+                .FirstOrDefault(m => m.Id == modId);
         }
         
         public bool SaveAll()
         {
-            _dbContext.SaveChanges();
-            return true;
+            return _dbContext.SaveChanges() > 0;
         }
 
         public void AddEntity(object model)

@@ -1,16 +1,15 @@
 ﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
 using Steinbauer.Data.Entities;
 
 namespace Steinbauer.Data
 {
     public interface ISteinbauerRepository
     {
-        IEnumerable<Vehicle> GetAllVehicles();
-        IEnumerable<Modification> GetAllModifications();
+        IEnumerable<Vehicle> GetAllVehicles( bool includeMods );
+        IEnumerable<Modification> GetAllModifications( int id );
 
         Vehicle GetVehicleById(int id);
-        IEnumerable<Modification> GetModificationById(int id);
+        Modification GetModificationById(int id);
 
         bool SaveAll();
         void AddEntity( object model );        

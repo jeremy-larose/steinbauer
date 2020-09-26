@@ -11,7 +11,6 @@ namespace Steinbauer.Data
             CreateMap<Vehicle, VehicleViewModel>()
                 .ForMember( v=>v.VehicleId, ex => ex.MapFrom( v => v.Id ))
                 .ForMember( v=>v.OwnerName, ex => ex.MapFrom( v=>v.Name))
-                //.ForMember( v=>v.EngineRunning, ex => ex.MapFrom( v=>v.EngineRunning ))
                 .ForMember( v=>v.Date, ex => ex.MapFrom( v=>v.LastRan ))
                 .ReverseMap();
 

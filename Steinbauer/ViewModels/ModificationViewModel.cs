@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using Steinbauer.Data.Entities;
-
-namespace Steinbauer.ViewModels
+﻿namespace Steinbauer.ViewModels
 {
     public class ModificationViewModel
     {
@@ -10,7 +6,5 @@ namespace Steinbauer.ViewModels
         public string ModificationName { get; set; }
         public int Horsepower { get; set; }
         public int Torque { get; set; }
-        [Required]
-        public decimal UnitPrice { get; set; }
     }
 }

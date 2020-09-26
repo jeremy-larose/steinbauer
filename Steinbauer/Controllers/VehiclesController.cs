@@ -13,9 +13,9 @@ namespace Steinbauer.Controllers
     [Route( "api/[Controller]")]
     [ApiController]
     [Produces( "application/json")]
-    public class VehiclesController : ControllerBase
+    public class VehiclesController : Controller
     {
-        private VehiclesDbContext _context;
+        private readonly VehiclesDbContext _context;
         private readonly ISteinbauerRepository _repository;
         private readonly ILogger<VehiclesController> _logger;
         private readonly IMapper _mapper;
@@ -44,11 +44,22 @@ namespace Steinbauer.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Vehicle> GetVehicles()
+        [ProducesResponseType(200)]
+        public IActionResult Get( bool includeMods = true )
         {
-            return _context.Vehicles;
+            try
+            {
+                var results = _repository.GetAllVehicles( includeMods );
+                return Ok(
+                    _mapper.Map<IEnumerable<Vehicle>, IEnumerable<VehicleViewModel>>( results ));
+            }
+            catch (Exception e)
+            {
+                _logger.LogError( $"Failed to get vehicles: {e}");
+                return BadRequest("Failed to get vehicle.");
+            }
         }
-
+        
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
         {
@@ -66,13 +77,13 @@ namespace Steinbauer.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogInformation( $"Failed to get vehicle: {e}");
+                _logger.LogError( $"Failed to get vehicle: {e}");
                 return BadRequest( "Failed to get vehicle." );
             }
         }
         
         [HttpPost]
-        [ActionName( nameof( GetVehicles ))]
+        [ActionName( nameof( Get ))]
         public IActionResult AddVehicle(VehicleViewModel vehicle)
         {
             try
@@ -81,9 +92,10 @@ namespace Steinbauer.Controllers
                 {
                     var newVehicle = _mapper.Map<VehicleViewModel, Vehicle>(vehicle);
                     _context.Vehicles.Add(newVehicle);
+                    _repository.AddEntity(newVehicle);
                     _context.SaveChanges();
-
-                    return Created($"/api/vehicles/{newVehicle.Id}", _mapper.Map<Vehicle, VehicleViewModel>(newVehicle));
+                    return Created($"/api/vehicles/{newVehicle.Id}",
+                        _mapper.Map<Vehicle, VehicleViewModel>(newVehicle));
                 }
                 else
                 {

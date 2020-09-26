@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Logging;
 using Steinbauer.Data;
 using Steinbauer.Data.Entities;
@@ -10,57 +10,33 @@ using Steinbauer.ViewModels;
 
 namespace Steinbauer.Controllers
 {
-    [Route( "/api/vehicles/{vehicleid}/mods")]
+    [Route( "/api/vehicles/{vehicleId}/mods")]
     [ApiController]
     [Produces( "application/json")]
-    public class VehicleModsController : ControllerBase
+    public class VehicleModsController : Controller
     {
-        private VehiclesDbContext _context;
         private readonly ISteinbauerRepository _repository;
         private readonly ILogger<VehicleModsController> _logger;
         private readonly IMapper _mapper;
+        private readonly VehiclesDbContext _context;
 
         public VehicleModsController(ISteinbauerRepository repository, ILogger<VehicleModsController> logger,
-            IMapper mapper, VehiclesDbContext context)
+            IMapper mapper, VehiclesDbContext context )
         {
             _repository = repository;
             _logger = logger;
             _mapper = mapper;
             _context = context;
-
-            if (!_context.Modifications.Any())
-            {
-                _context.Modifications.Add(new Modification
-                {
-                    Id = 1,
-                    ModName = "DiabloTuner",
-                    Horsepower = 10,
-                    Torque = 10
-                });
-
-                _context.Modifications.Add(new Modification
-                {
-                    Id = 2,
-                    ModName = "Custom Exhaust",
-                    Horsepower = 10,
-                    Torque = 20
-                });
-                    _context.SaveChanges();
-            }
         }
-
+        
         [HttpGet]
         public IActionResult Get(int vehicleId)
         {
             var vehicle = _repository.GetVehicleById(vehicleId);
             if (vehicle != null)
-            {
                 return Ok(_mapper.Map<IEnumerable<Modification>, IEnumerable<ModificationViewModel>>(vehicle.Modifications));
-            }
-            else
-            {
-                return NotFound();
-            }
+            
+            return NotFound();
         }
 
         [HttpGet("{id}")]
@@ -69,19 +45,13 @@ namespace Steinbauer.Controllers
             var vehicle = _repository.GetVehicleById(vehicleId);
             if (vehicle != null)
             {
-                //var mod = vehicle.Modifications.Where(v => v.Id == id).FirstOrDefault();
-                return Ok(_mapper.Map<IEnumerable<Modification>, IEnumerable<ModificationViewModel>>(vehicle.Modifications));
+                var mod = vehicle.Modifications.FirstOrDefault( v=>v.Id == vehicleId );
+                if (mod != null)
+                {
+                    return Ok(_mapper.Map<Modification, ModificationViewModel>(mod));
+                }
             }
-            else
-            {
-                return NotFound();
-            }
-        }
-        /* Working Code, Commented to follow video
-        [HttpGet]
-        public IEnumerable<Modification> GetModifications()
-        {
-            return _context.Modifications;
+            return NotFound();
         }
 
         [HttpPost]
@@ -111,7 +81,7 @@ namespace Steinbauer.Controllers
         }
 
         [HttpPost]
-        [ActionName(nameof(GetModifications))]
+        [ActionName(nameof( Get ))]
         public IActionResult AddModification( ModificationViewModel modification )
         {
             try
@@ -134,6 +104,6 @@ namespace Steinbauer.Controllers
                 _logger.LogInformation( $"Failed to create new modification: {e}");
                 return BadRequest("Failed to add new modification to database.");
             }
-        } */ 
+        } 
     }  
 }

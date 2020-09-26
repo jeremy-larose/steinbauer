@@ -30,7 +30,24 @@ namespace Steinbauer.Services
                         Name = "JeremyCar",
                         Speed = 10,
                         VehicleType = VehicleType.Truck,
-                        ImageFile = "ramTruck.jpg"
+                        ImageFile = "ramTruck.jpg",
+                        Modifications = new List<Modification>
+                        {
+                            new Modification()
+                            {
+                                Horsepower = 50,
+                                Torque = 50,
+                                ModName = "Supercharger",
+                                Id = 1
+                            },
+                            new Modification()
+                            {
+                                Horsepower = 25,
+                                Torque = 100,
+                                ModName = "Diablo Tune",
+                                Id = 2
+                            }
+                        }
                     },
                     new Vehicle()
                     {
@@ -40,8 +57,17 @@ namespace Steinbauer.Services
                         Name = "MaceyCar",
                         Speed = 0,
                         VehicleType = VehicleType.Sedan,
-                        ImageFile = "dodgeCharger.jpg"
-
+                        ImageFile = "dodgeCharger.jpg",
+                        Modifications = new List<Modification>
+                        {
+                            new Modification()
+                            {
+                            Horsepower = 125,
+                            Torque = 100,
+                            ModName = "Turbocharged",
+                            Id = 3
+                            }
+                        }
                     },
                     new Vehicle()
                     {
@@ -51,28 +77,11 @@ namespace Steinbauer.Services
                         Name = "KellyCar",
                         Speed = 70,
                         VehicleType = VehicleType.Semi,
-                        ImageFile = "semiTruck.jpg",
+                        ImageFile = "semiTruck.jpg"
                     });
-/*
-                context.Modifications.AddRange(
-                    new Modification()
-                    {
-                        ModId = 1,
-                        ModName = "Custom Exhaust",
-                        Horsepower = 10,
-                        Torque = 10
-                    },
-                    new Modification()
-                    {
-                        ModId = 1,
-                        ModName = "Diablo Tuner",
-                        Horsepower = 50,
-                        Torque = 150
-                    }); */ 
 
                 context.SaveChanges();
             }
-            
         }
     }
 }
