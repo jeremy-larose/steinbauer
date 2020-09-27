@@ -1,26 +1,13 @@
 ﻿@model IEnumerable<Steinbauer.Data.Entities.Vehicle> 
+@section Scripts {
+    <script src="~/clientapp/runtime.js"></script>
+    <script src="~/clientapp/polyfills.js"></script>
+    <script src="~/clientapp/styles.js"></script>
+    <script src="~/clientapp/vendor.js"></script>
+    <script src="~/clientapp/main.js"></script>
 }
-
 <h1>Browse</h1>
-<p> Count : @Model.Count() </p>
-
-<div class="row">
-    @foreach (var v in Model)
-    {
-        <div class="col-md-3">
-            <div class="border bg-light rounded p-1">
-                <img src="/lib/img/@v.ImageFile" class="img-fluid" alt="@v.Name"/>
-                <h3>@v.Name - @v.VehicleType</h3>
-                <ul>
-                    <li>Current Speed: @v.Speed mph</li>
-                    <li>Last Ran: @v.LastRan</li>
-                    <li>Currently Running: @v.EngineRunning</li>
-                </ul>
-                <button id="editButton" class="btn btn-success">Edit</button>
-            </div>
-        </div>
-    }
-</div>
+<the-shop></the-shop>
 <!DOCTYPE html>
 
 <html>

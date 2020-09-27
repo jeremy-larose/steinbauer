@@ -27,12 +27,21 @@
     </ItemGroup>
 
     <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\app\shared\dataService.ts" />
+      <TypeScriptCompile Include="ClientApp\shop\productList.component.ts" />
       <TypeScriptCompile Include="wwwroot\ts\main.ts" />
       <TypeScriptCompile Include="wwwroot\ts\storecustomer.ts" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ClientApp" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\angular.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\e2e\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\package-lock.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\package.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tsconfig.app.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tsconfig.spec.json" />
+      <_ContentIncludedByDefault Remove="steinbauer-app\tslint.json" />
     </ItemGroup>
 
 </Project>
