@@ -9,10 +9,10 @@ namespace Steinbauer.Data
 {
     public class VehiclesRepository : ISteinbauerRepository
     {
-        private readonly VehiclesDbContext _dbContext;
+        private readonly SteinbauerDbContext _dbContext;
         private readonly ILogger<VehiclesRepository> _logger;
 
-        public VehiclesRepository(VehiclesDbContext dbContext, ILogger<VehiclesRepository> logger )
+        public VehiclesRepository(SteinbauerDbContext dbContext, ILogger<VehiclesRepository> logger )
         {
             _dbContext = dbContext;
             _logger = logger;
@@ -35,7 +35,14 @@ namespace Steinbauer.Data
             }
         }
 
-        public IEnumerable<Modification> GetAllModifications( int vehicleId )
+        public IEnumerable<Modification> GetAllModifications()
+        {
+            return _dbContext.Modifications
+                .OrderBy( m=> m.Id)
+                .ToList();
+        }
+
+        public IEnumerable<Modification> GetModsForVehicle( int vehicleId )
         {
             try
             {
@@ -89,7 +96,31 @@ namespace Steinbauer.Data
             _dbContext.SaveChanges();
         }
 
+        public void AddVehicle(Vehicle newVehicle)
+        {
+            AddEntity(newVehicle);
+        }
 
-        
+        public void AddModification(Modification newMod)
+        {
+            AddEntity(newMod);
+        }
+
+        public void AddModificationToVehicle(Order newOrder)
+        {
+            var vehicle = GetVehicleById(newOrder.VehicleId);
+            foreach (var item in newOrder.Modifications)
+            {
+                vehicle.Modifications.Add(item);
+            }
+        }
+        /*
+        public void AddModification( Order newOrder )
+        {
+            foreach (var item in newOrder.Modifications)
+            {
+                AddEntity(item);
+            }
+        } */
     }
 }

@@ -18,10 +18,10 @@ namespace Steinbauer.Controllers
         private readonly ISteinbauerRepository _repository;
         private readonly ILogger<VehicleModsController> _logger;
         private readonly IMapper _mapper;
-        private readonly VehiclesDbContext _context;
+        private readonly SteinbauerDbContext _context;
 
         public VehicleModsController(ISteinbauerRepository repository, ILogger<VehicleModsController> logger,
-            IMapper mapper, VehiclesDbContext context )
+            IMapper mapper, SteinbauerDbContext context )
         {
             _repository = repository;
             _logger = logger;
@@ -79,31 +79,5 @@ namespace Steinbauer.Controllers
                 return BadRequest("Failed to add new modification to database.");
             }
         }
-
-        [HttpPost]
-        [ActionName(nameof( Get ))]
-        public IActionResult AddModification( ModificationViewModel modification )
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    var newModification = _mapper.Map<ModificationViewModel, Modification>(modification);
-                    _context.Modifications.Add(newModification);
-                    _context.SaveChanges();
-                    
-                    return Created($"/api/mods/{newModification.Id}", _mapper.Map<Modification, ModificationViewModel>(newModification));
-                }
-                else
-                {
-                    return BadRequest( ModelState );
-                }
-            }
-            catch (Exception e)
-            {
-                _logger.LogInformation( $"Failed to create new modification: {e}");
-                return BadRequest("Failed to add new modification to database.");
-            }
-        } 
     }  
 }

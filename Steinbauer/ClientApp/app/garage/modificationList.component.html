@@ -1,0 +1,9 @@
+<div class="row modification-info">
+    <div class="col-md-4 well well-sm" *ngFor="let m of modifications">
+        <div class="modification-name">{{ m.modificationName}}</div>
+        <div><strong>Horsepower Gains:</strong> {{m.horsepower}}</div>
+        <div><strong>Hello:</strong> {{m.torque}}</div>
+        <button id="addButton" class="btn btn-success btn-sm pull-right" (click)="addModificationToOrder(m)" >Add</button>
+        <button id="removeButton" class="btn btn-danger">Remove</button>
+    </div>
+</div>

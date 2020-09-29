@@ -15,12 +15,12 @@ namespace Steinbauer.Controllers
     [Produces( "application/json")]
     public class VehiclesController : Controller
     {
-        private readonly VehiclesDbContext _context;
+        private readonly SteinbauerDbContext _context;
         private readonly ISteinbauerRepository _repository;
         private readonly ILogger<VehiclesController> _logger;
         private readonly IMapper _mapper;
 
-        public VehiclesController(ISteinbauerRepository vehiclesRepository, ILogger<VehiclesController> logger, IMapper mapper, VehiclesDbContext context )
+        public VehiclesController(ISteinbauerRepository vehiclesRepository, ILogger<VehiclesController> logger, IMapper mapper, SteinbauerDbContext context )
         {
             _repository = vehiclesRepository;
             _context = context;
@@ -91,6 +91,31 @@ namespace Steinbauer.Controllers
             {
                 _logger.LogInformation( $"Failed to create new vehicle: {e}");
                 return BadRequest("Failed to add new vehicle to database. ");
+            }
+        }
+        
+        public IActionResult AddModification(ModificationViewModel modification)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var newMod = _mapper.Map<ModificationViewModel, Modification>(modification);
+                    _context.Modifications.Add(newMod);
+                    _repository.AddEntity(newMod);
+                    _context.SaveChanges();
+                    return Created($"/api/mods/{newMod.Id}",
+                        _mapper.Map<Modification, ModificationViewModel>(newMod));
+                }
+                else
+                {
+                    return BadRequest(ModelState);
+                }
+            }
+            catch( Exception e )
+            {
+                _logger.LogInformation( $"Failed to create new modification: {e}");
+                return BadRequest("Failed to add new modification to database. ");
             }
         }
     }

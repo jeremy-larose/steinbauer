@@ -27,7 +27,7 @@ namespace Steinbauer
                 using (var scope = host.Services.CreateScope())
                 {
                     var services = scope.ServiceProvider;
-                    var context = services.GetRequiredService<VehiclesDbContext>();
+                    var context = services.GetRequiredService<SteinbauerDbContext>();
 
                     DataGenerator.Initialize(services);
                 }

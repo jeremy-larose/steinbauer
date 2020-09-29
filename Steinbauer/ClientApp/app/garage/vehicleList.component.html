@@ -1,0 +1,33 @@
+<div class="row">
+<table class="vehicle-info table table-hover">
+    <tr>
+        <th>Vehicle</th>
+        <th>Horsepower</th>
+        <th>Torque</th>
+        <th>Engine Status</th>
+        <th class="hidden-large"></th>
+        <th>&nbsp;</th>
+    </tr>
+    <tbody>
+    <tr *ngFor="let v of vehicles">
+        <td>{{ v.ownerName }}</td>
+        <td>{{ v.horsepower }}hp</td>
+        <td>{{ v.torque }}lb/ft</td>
+        <td>{{ displayEngineStatus(v.engineRunning) }}</td>
+        <td>
+            <div class="pull-right">
+                <button id="editButton" class="btn btn-warning btn-sm margin-right" (click)="onEdit(v)"><span
+                        class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> Edit</span></button>
+            </div>
+        </td>
+        <td>
+            <div class="pull-right">
+                <button id="addButton" class="btn btn-warning btn-sm margin-right" (click)="onAdd()"><span
+                        class="glyphicon glyphicon-success"></span><span class="hidden-xs"> Add</span></button>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</div>

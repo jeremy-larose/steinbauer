@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\jerem\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jerem\AppData\Local\JetBrains\Rider2020.2\javascript\typings\lodash\4.14.161\node_modules\@types\lodash" t="IncludeRecursive" />
     <e p="C:\Users\jerem\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Steinbauer.1012703480.00" t="ExcludeRecursive" />
     <e p="C:\Users\jerem\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\jerem\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
@@ -23,12 +24,43 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="ClientApp" t="Include">
           <e p="app" t="Include">
-            <e p="app-routing.module.ts" t="Include" />
+            <e p="app.component.css" t="Include" />
             <e p="app.component.html" t="Include" />
+            <e p="app.component.spec.ts" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
+            <e p="checkout" t="Include">
+              <e p="checkout.component.css" t="Include" />
+              <e p="checkout.component.html" t="Include" />
+              <e p="checkout.component.ts" t="Include" />
+            </e>
+            <e p="edit" t="Include">
+              <e p="edit.component.css" t="Include" />
+              <e p="edit.component.html" t="Include" />
+              <e p="edit.component.ts" t="Include" />
+            </e>
+            <e p="garage" t="Include">
+              <e p="cart.component.html" t="Include" />
+              <e p="cart.component.ts" t="Include" />
+              <e p="garage.component.css" t="Include" />
+              <e p="garage.component.html" t="Include" />
+              <e p="garage.component.ts" t="Include" />
+              <e p="modificationList.component.css" t="Include" />
+              <e p="modificationList.component.html" t="Include" />
+              <e p="modificationList.component.ts" t="Include" />
+              <e p="vehicleList.component.css" t="Include" />
+              <e p="vehicleList.component.html" t="Include" />
+              <e p="vehicleList.component.ts" t="Include" />
+            </e>
+            <e p="login" t="Include">
+              <e p="login.component.html" t="Include" />
+              <e p="login.component.ts" t="Include" />
+            </e>
             <e p="Shared" t="Include">
               <e p="dataService.ts" t="Include" />
+              <e p="modification.ts" t="Include" />
+              <e p="order.ts" t="Include" />
+              <e p="vehicle.ts" t="Include" />
             </e>
           </e>
           <e p="assets" t="Include">
@@ -42,15 +74,13 @@
           <e p="index.html" t="Include" />
           <e p="main.ts" t="Include" />
           <e p="polyfills.ts" t="Include" />
-          <e p="shop" t="Include">
-            <e p="productList.component.html" t="Include" />
-            <e p="productList.component.ts" t="Include" />
-          </e>
           <e p="styles.css" t="Include" />
           <e p="test.ts" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="AppController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="ModificationsController.cs" t="Include" />
           <e p="VehicleModsController.cs" t="Include" />
           <e p="VehiclesController.cs" t="Include" />
         </e>
@@ -58,6 +88,9 @@
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="Entities" t="Include">
             <e p="Modification.cs" t="Include" />
+            <e p="Order.cs" t="Include" />
+            <e p="OrderItem.cs" t="Include" />
+            <e p="StoreUser.cs" t="Include" />
             <e p="Vehicle.cs" t="Include" />
           </e>
           <e p="ISteinbauerRepository.cs" t="Include" />
@@ -66,88 +99,20 @@
             <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
+          <e p="SteinbauerDbContext.cs" t="Include" />
           <e p="SteinbauerMappingProfile.cs" t="Include" />
-          <e p="VehiclesDbContext.cs" t="Include" />
           <e p="VehiclesRepository.cs" t="Include" />
-        </e>
-        <e p="dist" t="Include">
-          <e p="out-tsc" t="Include">
-            <e p="ClientApp" t="Include">
-              <e p="app" t="Include">
-                <e p="app-routing.module.js" t="Include" />
-                <e p="app-routing.module.js.map" t="Include" />
-                <e p="app.component.js" t="Include" />
-                <e p="app.component.js.map" t="Include" />
-                <e p="app.module.js" t="Include" />
-                <e p="app.module.js.map" t="Include" />
-              </e>
-              <e p="environments" t="Include">
-                <e p="environment.js" t="Include" />
-                <e p="environment.js.map" t="Include" />
-                <e p="environment.prod.js" t="Include" />
-                <e p="environment.prod.js.map" t="Include" />
-              </e>
-              <e p="main.js" t="Include" />
-              <e p="main.js.map" t="Include" />
-              <e p="polyfills.js" t="Include" />
-              <e p="polyfills.js.map" t="Include" />
-              <e p="shop" t="Include">
-                <e p="productList.component.js" t="Include" />
-                <e p="productList.component.js.map" t="Include" />
-              </e>
-              <e p="test.js" t="Include" />
-              <e p="test.js.map" t="Include" />
-            </e>
-            <e p="steinbauer-app" t="Include">
-              <e p="e2e" t="Include">
-                <e p="src" t="Include">
-                  <e p="app.e2e-spec.js" t="Include" />
-                  <e p="app.e2e-spec.js.map" t="Include" />
-                  <e p="app.po.js" t="Include" />
-                  <e p="app.po.js.map" t="Include" />
-                </e>
-              </e>
-              <e p="src" t="Include">
-                <e p="app" t="Include">
-                  <e p="app-routing.module.js" t="Include" />
-                  <e p="app-routing.module.js.map" t="Include" />
-                  <e p="app.component.js" t="Include" />
-                  <e p="app.component.js.map" t="Include" />
-                  <e p="app.module.js" t="Include" />
-                  <e p="app.module.js.map" t="Include" />
-                </e>
-                <e p="environments" t="Include">
-                  <e p="environment.js" t="Include" />
-                  <e p="environment.js.map" t="Include" />
-                  <e p="environment.prod.js" t="Include" />
-                  <e p="environment.prod.js.map" t="Include" />
-                </e>
-                <e p="main.js" t="Include" />
-                <e p="main.js.map" t="Include" />
-                <e p="polyfills.js" t="Include" />
-                <e p="polyfills.js.map" t="Include" />
-                <e p="test.js" t="Include" />
-                <e p="test.js.map" t="Include" />
-              </e>
-            </e>
-            <e p="wwwroot" t="Include">
-              <e p="ts" t="Include">
-                <e p="main.js" t="Include" />
-                <e p="main.js.map" t="Include" />
-                <e p="storecustomer.js" t="Include" />
-                <e p="storecustomer.js.map" t="Include" />
-              </e>
-            </e>
-          </e>
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
         </e>
+        <e p="node_modules\@angular\animations" t="IncludeRecursive" />
         <e p="node_modules\@angular\cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\common" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\core" t="IncludeRecursive" />
+        <e p="node_modules\@angular\forms" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
         <e p="node_modules\@angular\router" t="IncludeRecursive" />
@@ -211,6 +176,7 @@
         <e p="node_modules\karma-jasmine" t="IncludeRecursive" />
         <e p="node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
         <e p="node_modules\license-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules\lodash" t="IncludeRecursive" />
         <e p="node_modules\log-symbols" t="IncludeRecursive" />
         <e p="node_modules\magic-string" t="IncludeRecursive" />
         <e p="node_modules\make-dir" t="IncludeRecursive" />
@@ -221,7 +187,6 @@
         <e p="node_modules\ora" t="IncludeRecursive" />
         <e p="node_modules\p-map" t="IncludeRecursive" />
         <e p="node_modules\path-type" t="IncludeRecursive" />
-        <e p="node_modules\popper.js" t="IncludeRecursive" />
         <e p="node_modules\portfinder" t="IncludeRecursive" />
         <e p="node_modules\postcss" t="IncludeRecursive" />
         <e p="node_modules\protractor" t="IncludeRecursive" />
@@ -319,6 +284,7 @@
         <e p="Steinbauer.csproj" t="IncludeRecursive" />
         <e p="tsconfig.app.json" t="Include" />
         <e p="tsconfig.json" t="Include" />
+        <e p="tsconfig.spec.json" t="Include" />
         <e p="ViewModels" t="Include">
           <e p="ModificationViewModel.cs" t="Include" />
           <e p="VehicleViewModel.cs" t="Include" />
@@ -326,6 +292,12 @@
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="app" t="Include">
+            <e p="Add.cshtml" t="Include" />
+            <e p="Mods.cshtml" t="Include" />
+            <e p="Shop.cshtml" t="Include" />
+            <e p="Vehicles.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="Browse.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
@@ -348,30 +320,8 @@
             <e p="index.html" t="Include" />
             <e p="main.js" t="Include" />
             <e p="main.js.map" t="Include" />
-            <e p="out-tsc" t="Include">
-              <e p="app" t="Include">
-                <e p="app" t="Include">
-                  <e p="app-routing.module.js" t="Include" />
-                  <e p="app-routing.module.js.map" t="Include" />
-                  <e p="app.component.js" t="Include" />
-                  <e p="app.component.js.map" t="Include" />
-                  <e p="app.module.js" t="Include" />
-                  <e p="app.module.js.map" t="Include" />
-                </e>
-                <e p="environments" t="Include">
-                  <e p="environment.js" t="Include" />
-                  <e p="environment.js.map" t="Include" />
-                </e>
-                <e p="main.js" t="Include" />
-                <e p="main.js.map" t="Include" />
-                <e p="polyfills.js" t="Include" />
-                <e p="polyfills.js.map" t="Include" />
-                <e p="shop" t="Include">
-                  <e p="productList.component.js" t="Include" />
-                  <e p="productList.component.js.map" t="Include" />
-                </e>
-              </e>
-            </e>
+            <e p="polyfills-es5.js" t="Include" />
+            <e p="polyfills-es5.js.map" t="Include" />
             <e p="polyfills.js" t="Include" />
             <e p="polyfills.js.map" t="Include" />
             <e p="runtime.js" t="Include" />
@@ -385,6 +335,13 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="fonts" t="Include">
+            <e p="glyphicons-halflings-regular.eot" t="Include" />
+            <e p="glyphicons-halflings-regular.svg" t="Include" />
+            <e p="glyphicons-halflings-regular.ttf" t="Include" />
+            <e p="glyphicons-halflings-regular.woff" t="Include" />
+            <e p="glyphicons-halflings-regular.woff2" t="Include" />
+          </e>
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>
@@ -419,9 +376,11 @@
               <e p="LICENSE" t="Include" />
             </e>
             <e p="img" t="Include">
+              <e p="check.png" t="Include" />
               <e p="dodgecharger.jpg" t="Include" />
               <e p="ramTruck.jpg" t="Include" />
               <e p="semiTruck.jpg" t="Include" />
+              <e p="x.png" t="Include" />
             </e>
             <e p="jquery" t="Include">
               <e p="dist" t="Include">
@@ -445,14 +404,6 @@
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
               <e p="LICENSE.txt" t="Include" />
             </e>
-          </e>
-          <e p="ts" t="Include">
-            <e p="main.js" t="Include" />
-            <e p="main.js.map" t="Include" />
-            <e p="main.ts" t="Include" />
-            <e p="storecustomer.js" t="Include" />
-            <e p="storecustomer.js.map" t="Include" />
-            <e p="storecustomer.ts" t="Include" />
           </e>
         </e>
       </e>

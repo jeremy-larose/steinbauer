@@ -21,7 +21,9 @@ namespace Steinbauer.Data.Entities
         public DateTime LastRan { get; set; }
         public int Speed { get; set; }
         public string ImageFile { get; set; }
+        public int Horsepower { get; set; }
+        public int Torque { get; set; }
         
-        public IEnumerable<Modification> Modifications { get; set; }
+        public ICollection<Modification> Modifications { get; set; }
     }
 }

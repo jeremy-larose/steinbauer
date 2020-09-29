@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Steinbauer</title>
+    <base href="/">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -24,6 +25,21 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Vehicles">Vehicles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Mods">Mods</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Shop">Shop</a>
+                  </li> 
+                  <li class="nav-item">
+                                           <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Browse">Browse</a>
+                                           </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="App" asp-action="Add">Add</a>
                     </li>
                 </ul>
             </div>

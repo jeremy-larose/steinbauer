@@ -13,7 +13,7 @@ namespace Steinbauer.Services
         public static void Initialize(IServiceProvider serviceProvider)
         {
             using (var context =
-                new VehiclesDbContext(serviceProvider.GetRequiredService<DbContextOptions<VehiclesDbContext>>()))
+                new SteinbauerDbContext(serviceProvider.GetRequiredService<DbContextOptions<SteinbauerDbContext>>()))
             {
                 // Look for any vehicles.
                 if (context.Vehicles.Any())
@@ -27,8 +27,10 @@ namespace Steinbauer.Services
                         Id = 1,
                         EngineRunning = true,
                         LastRan = DateTime.Today,
-                        Name = "JeremyCar",
+                        Name = "Jeremy LaRose",
                         Speed = 10,
+                        Horsepower = 710,
+                        Torque = 985,
                         VehicleType = VehicleType.Truck,
                         ImageFile = "ramTruck.jpg",
                         Modifications = new List<Modification>
@@ -54,8 +56,10 @@ namespace Steinbauer.Services
                         Id = 2,
                         EngineRunning = false,
                         LastRan = DateTime.Today,
-                        Name = "MaceyCar",
+                        Name = "Macey Blouw",
                         Speed = 0,
+                        Horsepower = 385,
+                        Torque = 410,
                         VehicleType = VehicleType.Sedan,
                         ImageFile = "dodgeCharger.jpg",
                         Modifications = new List<Modification>
@@ -74,8 +78,10 @@ namespace Steinbauer.Services
                         Id = 3,
                         EngineRunning = true,
                         LastRan = DateTime.Now,
-                        Name = "KellyCar",
+                        Name = "Kelly Blouw",
                         Speed = 70,
+                        Horsepower = 485,
+                        Torque = 1200,
                         VehicleType = VehicleType.Semi,
                         ImageFile = "semiTruck.jpg"
                     });

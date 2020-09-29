@@ -33,13 +33,13 @@ namespace Steinbauer
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             
-            services.AddDbContext<VehiclesDbContext>(options => options.UseInMemoryDatabase("Vehicles"));
+            services.AddDbContext<SteinbauerDbContext>(options => options.UseInMemoryDatabase("Vehicles"));
             services.AddAutoMapper( Assembly.GetExecutingAssembly());
             
             services.AddScoped<ISteinbauerRepository, VehiclesRepository>();
             
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<VehiclesDbContext>();
+                .AddEntityFrameworkStores<SteinbauerDbContext>();
             
             services.AddControllersWithViews();
            services.AddRazorPages();

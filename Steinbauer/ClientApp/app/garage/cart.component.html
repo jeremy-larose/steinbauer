@@ -1,0 +1,22 @@
+<h3>Shopping Cart</h3>
+<div>ItemCount: {{data.order.modifications.length}}</div>
+<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <td>Product</td>            
+            <td>hp</td>
+            <td>lb/ft</td>
+            <td>Gains</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let o of data.order.modifications">
+        <td>{{ o.modificationName }}</td>
+        <td>{{ o.horsepower }}hp</td>
+        <td>{{ o.torque }}lb/ft</td>
+        <td>{{ o.horsepower + o.torque}}</td>        
+    </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-success" *ngIf="data.order.modifications.length > 0" (click)="onCheckout()">Checkout</button>
