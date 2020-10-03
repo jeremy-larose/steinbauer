@@ -7,6 +7,7 @@ export class Order {
     orderDate: Date = new Date();
     orderNumber: string;
     orderVehicle: Vehicle = new Vehicle();
+    orderVehicles: Array<Vehicle> = new Array<Vehicle>();
     modifications: Array<Modification> = new Array<Modification>();
 /*
     get horsepowerTotal(): number {

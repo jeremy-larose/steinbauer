@@ -24,6 +24,10 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="ClientApp" t="Include">
           <e p="app" t="Include">
+            <e p="add" t="Include">
+              <e p="addVehicle.component.html" t="Include" />
+              <e p="addVehicle.component.ts" t="Include" />
+            </e>
             <e p="app.component.css" t="Include" />
             <e p="app.component.html" t="Include" />
             <e p="app.component.spec.ts" t="Include" />
@@ -107,12 +111,14 @@
           <e p="ErrorViewModel.cs" t="Include" />
         </e>
         <e p="node_modules\@angular\animations" t="IncludeRecursive" />
+        <e p="node_modules\@angular\cdk" t="IncludeRecursive" />
         <e p="node_modules\@angular\cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\common" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler" t="IncludeRecursive" />
         <e p="node_modules\@angular\compiler-cli" t="IncludeRecursive" />
         <e p="node_modules\@angular\core" t="IncludeRecursive" />
         <e p="node_modules\@angular\forms" t="IncludeRecursive" />
+        <e p="node_modules\@angular\material" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser" t="IncludeRecursive" />
         <e p="node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
         <e p="node_modules\@angular\router" t="IncludeRecursive" />
@@ -123,10 +129,14 @@
         <e p="node_modules\@angular-devkit\core" t="IncludeRecursive" />
         <e p="node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
         <e p="node_modules\@jsdevtools\coverage-istanbul-loader" t="IncludeRecursive" />
+        <e p="node_modules\@material\animation" t="IncludeRecursive" />
+        <e p="node_modules\@material\base" t="IncludeRecursive" />
+        <e p="node_modules\@material\dom" t="IncludeRecursive" />
+        <e p="node_modules\@material\list" t="IncludeRecursive" />
+        <e p="node_modules\@material\ripple" t="IncludeRecursive" />
         <e p="node_modules\@ngtools\webpack" t="IncludeRecursive" />
         <e p="node_modules\@types" t="IncludeRecursive">
           <e p="jasmine" t="IncludeRecursive" />
-          <e p="jasminewd2" t="IncludeRecursive" />
           <e p="minimatch" t="IncludeRecursive" />
           <e p="node" t="IncludeRecursive" />
           <e p="source-list-map" t="IncludeRecursive" />
@@ -155,6 +165,7 @@
         <e p="node_modules\font-awesome" t="IncludeRecursive" />
         <e p="node_modules\fsevents" t="IncludeRecursive" />
         <e p="node_modules\globby" t="IncludeRecursive" />
+        <e p="node_modules\hammerjs" t="IncludeRecursive" />
         <e p="node_modules\hash.js" t="IncludeRecursive" />
         <e p="node_modules\ignore" t="IncludeRecursive" />
         <e p="node_modules\indent-string" t="IncludeRecursive" />
@@ -164,17 +175,10 @@
         <e p="node_modules\is-path-in-cwd" t="IncludeRecursive" />
         <e p="node_modules\is-path-inside" t="IncludeRecursive" />
         <e p="node_modules\is-wsl" t="IncludeRecursive" />
-        <e p="node_modules\jasmine-core" t="IncludeRecursive" />
-        <e p="node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
         <e p="node_modules\jest-worker" t="IncludeRecursive" />
         <e p="node_modules\jquery" t="IncludeRecursive" />
         <e p="node_modules\jquery-validation" t="IncludeRecursive" />
         <e p="node_modules\jquery-validation-unobtrusive" t="IncludeRecursive" />
-        <e p="node_modules\karma" t="IncludeRecursive" />
-        <e p="node_modules\karma-chrome-launcher" t="IncludeRecursive" />
-        <e p="node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
-        <e p="node_modules\karma-jasmine" t="IncludeRecursive" />
-        <e p="node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
         <e p="node_modules\license-webpack-plugin" t="IncludeRecursive" />
         <e p="node_modules\lodash" t="IncludeRecursive" />
         <e p="node_modules\log-symbols" t="IncludeRecursive" />
@@ -182,11 +186,13 @@
         <e p="node_modules\make-dir" t="IncludeRecursive" />
         <e p="node_modules\make-error" t="IncludeRecursive" />
         <e p="node_modules\mimic-fn" t="IncludeRecursive" />
+        <e p="node_modules\node-sass" t="IncludeRecursive" />
         <e p="node_modules\onetime" t="IncludeRecursive" />
         <e p="node_modules\open" t="IncludeRecursive" />
         <e p="node_modules\ora" t="IncludeRecursive" />
         <e p="node_modules\p-map" t="IncludeRecursive" />
         <e p="node_modules\path-type" t="IncludeRecursive" />
+        <e p="node_modules\popper.js" t="IncludeRecursive" />
         <e p="node_modules\portfinder" t="IncludeRecursive" />
         <e p="node_modules\postcss" t="IncludeRecursive" />
         <e p="node_modules\protractor" t="IncludeRecursive" />
@@ -271,6 +277,20 @@
             </e>
           </e>
         </e>
+        <e p="out-tsc" t="Include">
+          <e p="spec" t="Include">
+            <e p="app" t="Include">
+              <e p="app.component.js" t="Include" />
+              <e p="app.component.js.map" t="Include" />
+              <e p="app.component.spec.js" t="Include" />
+              <e p="app.component.spec.js.map" t="Include" />
+            </e>
+            <e p="polyfills.js" t="Include" />
+            <e p="polyfills.js.map" t="Include" />
+            <e p="test.js" t="Include" />
+            <e p="test.js.map" t="Include" />
+          </e>
+        </e>
         <e p="package-lock.json" t="Include" />
         <e p="package.json" t="Include" />
         <e p="Program.cs" t="Include" />
@@ -326,6 +346,8 @@
             <e p="polyfills.js.map" t="Include" />
             <e p="runtime.js" t="Include" />
             <e p="runtime.js.map" t="Include" />
+            <e p="scripts.js" t="Include" />
+            <e p="scripts.js.map" t="Include" />
             <e p="styles.js" t="Include" />
             <e p="styles.js.map" t="Include" />
             <e p="vendor.js" t="Include" />

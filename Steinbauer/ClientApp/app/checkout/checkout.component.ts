@@ -14,8 +14,8 @@ export class Checkout {
     
     errorMessage: string = "";
     
-    onCheckout() {
-        this.data.checkout().subscribe( success => {
+    confirmVehicle() {
+        this.data.checkoutVehicle().subscribe( success => {
             if ( success ) {
                 this.router.navigate( ["/"]);
             }

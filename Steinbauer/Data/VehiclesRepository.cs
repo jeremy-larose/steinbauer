@@ -95,6 +95,16 @@ namespace Steinbauer.Data
             _dbContext.Add( model );
             _dbContext.SaveChanges();
         }
+        
+        public void DeleteEntity(int? id)
+        {
+            var entity = _dbContext.Vehicles.FirstOrDefault(v => v.Id == id);
+            if (entity != null)
+            {
+                _dbContext.Vehicles.Remove(entity);
+                _dbContext.SaveChanges();
+            }
+        }
 
         public void AddVehicle(Vehicle newVehicle)
         {

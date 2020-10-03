@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -10,9 +11,9 @@ using Steinbauer.ViewModels;
 
 namespace Steinbauer.Controllers
 {
-    [Route( "api/[Controller]")]
+    [Route("api/[Controller]")]
     [ApiController]
-    [Produces( "application/json")]
+    [Produces("application/json")]
     public class VehiclesController : Controller
     {
         private readonly SteinbauerDbContext _context;
@@ -20,7 +21,8 @@ namespace Steinbauer.Controllers
         private readonly ILogger<VehiclesController> _logger;
         private readonly IMapper _mapper;
 
-        public VehiclesController(ISteinbauerRepository vehiclesRepository, ILogger<VehiclesController> logger, IMapper mapper, SteinbauerDbContext context )
+        public VehiclesController(ISteinbauerRepository vehiclesRepository, ILogger<VehiclesController> logger,
+            IMapper mapper, SteinbauerDbContext context)
         {
             _repository = vehiclesRepository;
             _context = context;
@@ -30,21 +32,21 @@ namespace Steinbauer.Controllers
 
         [HttpGet]
         [ProducesResponseType(200)]
-        public IActionResult Get( bool includeMods = true )
+        public IActionResult Get(bool includeMods = true)
         {
             try
             {
-                var results = _repository.GetAllVehicles( includeMods );
+                var results = _repository.GetAllVehicles(includeMods);
                 return Ok(
-                    _mapper.Map<IEnumerable<Vehicle>, IEnumerable<VehicleViewModel>>( results ));
+                    _mapper.Map<IEnumerable<Vehicle>, IEnumerable<VehicleViewModel>>(results));
             }
             catch (Exception e)
             {
-                _logger.LogError( $"Failed to get vehicles: {e}");
+                _logger.LogError($"Failed to get vehicles: {e}");
                 return BadRequest("Failed to get vehicle.");
             }
         }
-        
+
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
         {
@@ -62,8 +64,29 @@ namespace Steinbauer.Controllers
             }
             catch (Exception e)
             {
-                _logger.LogError( $"Failed to get vehicle: {e}");
-                return BadRequest( "Failed to get vehicle." );
+                _logger.LogError($"Failed to get vehicle: {e}");
+                return BadRequest("Failed to get vehicle.");
+            }
+        }
+
+        [HttpDelete("{id:int}")]
+
+        public IActionResult DeleteVehicle(int? id)
+        {
+            try
+            {
+                if( id == null )
+                {
+                    return NotFound();
+                }
+
+                _repository.DeleteEntity( id ); 
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Failed to delete vehicle: {e}");
+                return BadRequest("Failed to delete vehicle.");
             }
         }
         

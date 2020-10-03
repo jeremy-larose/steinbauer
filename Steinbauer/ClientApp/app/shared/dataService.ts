@@ -1,4 +1,4 @@
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import {Observable, pipe} from "rxjs";
 import { map } from "rxjs/operators";
@@ -46,6 +46,16 @@ export class DataService {
                 return true;
             }));
     }
+
+    checkoutVehicle() {
+        alert( "Checking out vehicle: " + this.vehicle.ownerName );
+        return this.http.post( "/api/vehicles", this.vehicle,{
+        })
+            .pipe( map( response => {
+                this.vehicle = new Vehicle();
+                return true;
+            }));
+    }
     
     loadVehicles(): Observable<boolean> {
         return this.http.get( "/api/vehicles")
@@ -55,12 +65,38 @@ export class DataService {
         }));
     }
     
+    findVehicles( 
+        vehicleId: number, filter ='', sortOrder='asc',
+        pageNumber = 0, pageSize = 3 ): Observable<Vehicle[]> {
+        return this.http.get("/api/vehicles", {
+            params: new HttpParams()
+                .set('vehicleId', vehicleId.toString())
+                .set('filter', filter)
+                .set('sortOrder', sortOrder)
+                .set('pageNumber', pageNumber.toString())
+                .set('pageSize', pageSize.toString())
+        }).pipe(
+            map(res => res["payload"])
+        );
+    }
+    
     loadVehicle( vehicle ) {
         var url: string = "/api/vehicles/" + vehicle.vehicleId.toString();
         return this.http.get( url ).pipe( map( ( response: Vehicle ) => {
             this.vehicle = response;
             return true;
         }));
+    }
+    
+    // There is a bug here where using the vehicleID will cause errors when adding vehicles back to the database and the IDs
+    // being the same. May need to figure out some other way of indexing or renumbering upon deletion in the MVC portion of the app
+    // whenever HttpDelete is called?
+    deleteVehicle( vehicle ) {
+        return this.http.delete( "/api/vehicles/" + vehicle.vehicleId.toString().pipe( 
+            map( ( response: Vehicle ) => {
+                this.loadVehicles();
+            })
+        ) );
     }
     
     loadModifications(): Observable<boolean> {
@@ -81,5 +117,23 @@ export class DataService {
         mod.modificationName = newModification.modificationName;
         
         this.order.modifications.push( mod );
+    }
+    
+    public addVehicleToOrder( newVehicle: Vehicle )
+    {
+        var veh : Vehicle = new Vehicle();
+        
+        veh.vehicleId = this.vehicles.length+1;
+        veh.ownerName = newVehicle.ownerName;
+        veh.engineRunning = true;
+        veh.date = new Date();
+        veh.fileName = "dodgeCharger.jpg";
+        veh.vehicleType = 1;
+        veh.horsepower = newVehicle.horsepower;
+        veh.torque = newVehicle.torque;
+        
+        this.order.orderVehicle = veh;
+        
+        this.order.orderVehicles.push( veh );
     }
 }

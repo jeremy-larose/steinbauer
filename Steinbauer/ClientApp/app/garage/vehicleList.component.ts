@@ -9,12 +9,13 @@ import {Router} from "@angular/router";
     styleUrls: [ "vehicleList.component.css" ]
 })
 
+
 export class VehicleList implements OnInit {
     constructor( public data: DataService, private router: Router ){
         this.vehicles = data.vehicles;
     }
     
-    public vehicles: Vehicle[] = [];
+    public vehicles: Vehicle[];
     
     onEdit( vehicle ) {
         this.data.vehicle = vehicle;
@@ -23,6 +24,11 @@ export class VehicleList implements OnInit {
     
     onAdd() {
         this.router.navigate( ["add"]);
+    }
+    
+    onDelete( vehicle ) {
+        this.data.deleteVehicle(vehicle).subscribe( () =>
+            this.router.navigate( ["garage"] ));
     }
     
     ngOnInit() {

@@ -2,10 +2,9 @@
 
 <div class="row-cols-md-5" align="right">
     <img src="/lib/img/{{data.vehicle.fileName}}" class="img-thumbnail"/>
-    <div>Idsdfg: {{ data.vehicle.vehicleId}}</div>
-    <div>Name: {{data.vehicle.ownerName}}</div>
+    <div><strong>Id:</strong> {{ data.vehicle.vehicleId}}</div>
+    <div><strong>Name:</strong> {{data.vehicle.ownerName}}</div>
 
-    <div class="row-cols-md-5">
         <div class="modification-info col-md-4 well well-sm" *ngFor="let m of data.vehicle.modifications">
             <div class="modification-name">{{ m.modificationName}}</div>
             <div><strong>Horsepower Gains:</strong> {{m.horsepower}}</div>
@@ -13,5 +12,4 @@
             <button id="addButton" class="btn btn-success btn-sm pull-right">Add</button>
             <button id="removeButton" class="btn btn-danger btn-sm pull-left">Remove</button>
         </div>
-    </div>
 </div>

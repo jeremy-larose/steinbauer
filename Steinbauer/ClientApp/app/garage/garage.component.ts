@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import {Router} from "@angular/router";
+import {DataService} from "../shared/dataService";
 
 @Component( {
     selector: "the-garage",
@@ -6,5 +8,12 @@ import { Component } from "@angular/core";
 })
 
 export class Garage {
+    constructor( public data: DataService, public router: Router ) {
+        this.data = data;
+    }
     title = 'Steinbauer Garage';
+    
+    onAdd() {
+        this.router.navigate(["addVehicle"])
+    }
 }

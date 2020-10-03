@@ -14,6 +14,7 @@ namespace Steinbauer.Data
 
         bool SaveAll();
         void AddEntity( object model );
+        void DeleteEntity( int? id );
         void AddVehicle(Vehicle newVehicle);
         void AddModification(Modification newMod);
     }

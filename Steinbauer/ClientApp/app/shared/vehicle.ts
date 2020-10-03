@@ -1,6 +1,7 @@
 import {Modification} from "./modification";
 
 export class Vehicle {
+    
     vehicleId: number;
     ownerName: string;
     engineRunning: boolean;
