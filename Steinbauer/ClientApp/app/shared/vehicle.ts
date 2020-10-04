@@ -1,4 +1,5 @@
 import {Modification} from "./modification";
+import {VehicleType} from "../app.component";
 
 export class Vehicle {
     

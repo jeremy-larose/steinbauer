@@ -9,19 +9,12 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators} from "@angu
 
 export class AppComponent {
   title: "steinbauer-app";
-  vehicleControl = new FormControl( '', [Validators.required]);
-  selectFormControl = new FormControl( '', [Validators.required]);
-
-  vehicleTypes: VehicleType[] = [
-    { value: 0, viewValue: 'Sedan ' },
-    { value: 1, viewValue: 'Truck' },
-    { value: 2, viewValue: 'Compact' },
-    { value: 3, viewValue: 'Crossover' },
-    { value: 4, viewValue: 'Semi' }
-  ];
 }
 
-export interface VehicleType {
-  value: number;
-  viewValue: string;
+export enum VehicleType {
+  Sedan = 0,
+  Truck = 1,
+  Crossover = 2,
+  Compact = 3,
+  Semi = 4
 }

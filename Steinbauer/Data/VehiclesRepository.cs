@@ -84,7 +84,20 @@ namespace Steinbauer.Data
             return _dbContext.Modifications
                 .FirstOrDefault(m => m.Id == modId);
         }
-        
+
+        public void UpdateVehicle( Vehicle vehicle )
+        {
+            try
+            {
+                _dbContext.Entry( vehicle ).CurrentValues.SetValues( vehicle );
+                _dbContext.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError( $"Could not update the vehicle: {e}.");
+            }
+        }
+
         public bool SaveAll()
         {
             return _dbContext.SaveChanges() > 0;
@@ -92,18 +105,23 @@ namespace Steinbauer.Data
 
         public void AddEntity(object model)
         {
-            _dbContext.Add( model );
-            _dbContext.SaveChanges();
-        }
-        
-        public void DeleteEntity(int? id)
-        {
-            var entity = _dbContext.Vehicles.FirstOrDefault(v => v.Id == id);
-            if (entity != null)
+            try
             {
-                _dbContext.Vehicles.Remove(entity);
+                _dbContext.Add(model);
                 _dbContext.SaveChanges();
+
             }
+            catch (Exception e)
+            {
+                _logger.LogWarning( $"Could not add the entity: {e}.");
+            }
+        }
+
+        public void DeleteEntity(int id)
+        {
+            var vehicle = new Vehicle() {Id = id};
+            _dbContext.Entry(vehicle).State = EntityState.Deleted;
+            _dbContext.SaveChanges();
         }
 
         public void AddVehicle(Vehicle newVehicle)

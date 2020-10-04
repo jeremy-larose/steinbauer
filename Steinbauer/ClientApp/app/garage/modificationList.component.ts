@@ -24,4 +24,9 @@ export class ModificationList implements OnInit {
     {
         this.data.addToOrder( modification );
     }
+    
+    removeModification( modification: Modification )
+    {
+        this.data.removeFromOrder( modification );
+    }
 }

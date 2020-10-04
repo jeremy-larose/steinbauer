@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Logging;
 using Steinbauer.Data;
@@ -47,6 +48,39 @@ namespace Steinbauer.Controllers
             }
         }
 
+        [HttpPut("{id:int}")]
+        [ActionName( nameof( Get ))]
+
+        public IActionResult Put( VehicleViewModel vehicle, int id )
+        {
+            try
+            {
+                if ( ModelState.IsValid )
+                {
+                    
+                    var vehicleChanges = _mapper.Map<VehicleViewModel, Vehicle>(vehicle);
+                    //_mapper.Map(vehicle, existingVehicle);
+                    Vehicle vehicleToUpdate = _repository.GetVehicleById(id);
+
+                    _context.Entry( vehicleToUpdate ).CurrentValues.SetValues( vehicleChanges );
+                    _context.Entry( vehicleToUpdate ).State = EntityState.Modified;
+
+                    _context.SaveChanges();
+                    return Ok();
+                }
+                else
+                {
+                    _logger.LogError( $"Vehicle was not found at the id address: {id}");
+                    return NotFound();
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.LogError( $"Failed to get vehicle to update: {e}");
+                return BadRequest("The vehicle to edit was not found.");
+            }
+        }
+        
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
         {
@@ -70,16 +104,10 @@ namespace Steinbauer.Controllers
         }
 
         [HttpDelete("{id:int}")]
-
-        public IActionResult DeleteVehicle(int? id)
+        public IActionResult DeleteVehicle(int id)
         {
             try
             {
-                if( id == null )
-                {
-                    return NotFound();
-                }
-
                 _repository.DeleteEntity( id ); 
                 return Ok();
             }
@@ -100,8 +128,8 @@ namespace Steinbauer.Controllers
                 {
                     var newVehicle = _mapper.Map<VehicleViewModel, Vehicle>(vehicle);
                     _context.Vehicles.Add(newVehicle);
-                    _repository.AddEntity(newVehicle);
                     _context.SaveChanges();
+
                     return Created($"/api/vehicles/{newVehicle.Id}",
                         _mapper.Map<Vehicle, VehicleViewModel>(newVehicle));
                 }

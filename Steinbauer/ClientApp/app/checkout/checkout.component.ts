@@ -17,7 +17,7 @@ export class Checkout {
     confirmVehicle() {
         this.data.checkoutVehicle().subscribe( success => {
             if ( success ) {
-                this.router.navigate( ["/"]);
+                this.router.navigate( ["garage"]);
             }
         }, err => this.errorMessage = "Failed to save order.");
     }

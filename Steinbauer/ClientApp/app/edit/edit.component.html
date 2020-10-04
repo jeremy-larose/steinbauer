@@ -1,15 +1,63 @@
-<h3>Edit Vehicle</h3>
+<h3 align="center">Edit Vehicle</h3>
 
-<div class="row-cols-md-5" align="right">
+<div class="row-cols-md-12" align="center">
     <img src="/lib/img/{{data.vehicle.fileName}}" class="img-thumbnail"/>
-    <div><strong>Id:</strong> {{ data.vehicle.vehicleId}}</div>
-    <div><strong>Name:</strong> {{data.vehicle.ownerName}}</div>
-
-        <div class="modification-info col-md-4 well well-sm" *ngFor="let m of data.vehicle.modifications">
-            <div class="modification-name">{{ m.modificationName}}</div>
-            <div><strong>Horsepower Gains:</strong> {{m.horsepower}}</div>
-            <div><strong>Torque Gains:</strong> {{m.torque}}</div>
-            <button id="addButton" class="btn btn-success btn-sm pull-right">Add</button>
-            <button id="removeButton" class="btn btn-danger btn-sm pull-left">Remove</button>
+    <form (ngSubmit)="onSubmit()" #vehicleForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="ownerName">Owner Name</label>
+            <input type="text" class="form-control" id="ownerName"
+                   required
+                   [(ngModel)]="vehicle.ownerName" name="ownerName" #ownerName="ngModel">
+            <div [hidden]="ownerName.valid || ownerName.pristine" class="alert alert-danger">
+                Owner Name is required.
+            </div>
         </div>
+
+        <div class="form-group">
+            <label for="horsePower">Horsepower:</label>
+            <input type="number" class="form-control" id="horsePower"
+                   required
+                   [(ngModel)]="vehicle.horsepower" name="horsepower" #horsePower="ngModel">
+            <div [hidden]="horsePower.valid || horsePower.pristine" class="alert alert-danger">
+                Horsepower value is required.
+            </div>
+            <label for="torque">Torque:</label>
+            <input type="number" class="form-control" id="torque"
+                   required
+                   [(ngModel)]="vehicle.torque" name="torque" #torque="ngModel">
+            <div [hidden]="torque.valid || torque.pristine" class="alert alert-danger">
+                Torque value is required
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="vehicleType">Vehicle Type</label>
+            <select class="form-control" id="vehicleType" 
+                    required 
+                    [(ngModel)]="vehicle.vehicleType" name="vehicleType" #vehicleType="ngModel">
+                <option *ngFor="let type of vehicleTypes" [value]="type">{{type}}</option>
+            </select>
+            <div [hidden]="vehicleType.valid || vehicleType.pristine" class="alert alert-danger">
+                Vehicle type is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="engineRunning">Engine Running</label>
+            <input type="checkbox" class="form-control" id="engineRunning"
+                   [(ngModel)]="vehicle.engineRunning" name="engineRunning" #engineRunning="ngModel" ngModel="checked">
+            <div [hidden]="engineRunning.valid || engineRunning.pristine" class="alert alert-danger">
+                Engine running status is required.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!vehicleForm.form.valid">Submit
+        </button>
+    </form>
+    <br />
+    <modification-list></modification-list>
+    <br />
+    <br />
+    <br />
+    
 </div>

@@ -1,7 +1,8 @@
 <div class="row">
-    <h3 align="center">{{ title }}</h3>
-    <button class="btn btn-success btn-sm" (click)="onAdd()">
-        <span class="glyphicon glyphicon-success"></span><span class="hidden-xs"> Add</span></button>
-    
-    <vehicle-list></vehicle-list>
+    <div class="col-sm-4">
+        <addVehicle></addVehicle>
+    </div>
+    <div class="col-sm-8">
+        <vehicle-list></vehicle-list>
+    </div>
 </div>

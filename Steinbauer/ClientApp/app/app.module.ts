@@ -13,7 +13,6 @@ import { Login } from "./login/login.component";
 import { Edit } from "./edit/edit.component";
 import { AddVehicle } from "./add/addVehicle.component";
 import { FormsModule } from "@angular/forms";
-import {Vehicle} from "./shared/vehicle";
 
 let routes = [
   { path: "", component: Garage },
@@ -21,7 +20,8 @@ let routes = [
   { path: "login", component: Login },
   { path: "edit", component: Edit },
   { path: "addVehicle", component: AddVehicle },
-    { path: "garage", component: Garage }
+    { path: "garage", component: Garage },
+    { path: "app", component: AppComponent }
 ];
 
 @NgModule({

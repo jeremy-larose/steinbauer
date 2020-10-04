@@ -4,6 +4,6 @@
         <div><strong>Horsepower Gains:</strong> {{m.horsepower}}</div>
         <div><strong>Torque:</strong> {{m.torque}}</div>
         <button id="addButton" class="btn btn-success btn-sm pull-right" (click)="addModificationToOrder(m)" >Add</button>
-        <button id="removeButton" class="btn btn-danger">Remove</button>
+        <button id="removeButton" class="btn btn-danger btn-sm pull-left" (click)="removeModification(m)">Remove</button>
     </div>
 </div>

@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Steinbauer.Data.Entities
 {
     public enum VehicleType
     {
-        Sedan,
-        Truck,
-        Compact,
-        Crossover,
-        Semi
+        Sedan = 0,
+        Truck = 1,
+        Compact = 2,
+        Crossover = 3,
+        Semi = 4
     }
     
     public class Vehicle

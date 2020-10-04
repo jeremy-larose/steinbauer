@@ -12,8 +12,9 @@ export class Garage {
         this.data = data;
     }
     title = 'Steinbauer Garage';
-    
+
+    /*  Deprecated method
     onAdd() {
         this.router.navigate(["addVehicle"])
-    }
+    } */
 }

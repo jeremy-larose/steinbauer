@@ -14,6 +14,7 @@ export class DataService {
 
     private token: string = "";
     private tokenExpiration: Date;
+    public index: number;
     public vehicle: Vehicle = new Vehicle();
     public order: Order = new Order();
     
@@ -48,7 +49,6 @@ export class DataService {
     }
 
     checkoutVehicle() {
-        alert( "Checking out vehicle: " + this.vehicle.ownerName );
         return this.http.post( "/api/vehicles", this.vehicle,{
         })
             .pipe( map( response => {
@@ -56,7 +56,7 @@ export class DataService {
                 return true;
             }));
     }
-    
+
     loadVehicles(): Observable<boolean> {
         return this.http.get( "/api/vehicles")
             .pipe( map( (data: any[]) => {
@@ -64,20 +64,22 @@ export class DataService {
                 return true;
         }));
     }
+
+    getExistingVehicle( id ) {
+        var url: string = "/api/vehicles/" + id.toString();
+        return this.http.get( url ).pipe( map( ( response: Vehicle ) => {
+            if( response.vehicleId == id )
+                return true;
+        }));
+    }
     
-    findVehicles( 
-        vehicleId: number, filter ='', sortOrder='asc',
-        pageNumber = 0, pageSize = 3 ): Observable<Vehicle[]> {
-        return this.http.get("/api/vehicles", {
-            params: new HttpParams()
-                .set('vehicleId', vehicleId.toString())
-                .set('filter', filter)
-                .set('sortOrder', sortOrder)
-                .set('pageNumber', pageNumber.toString())
-                .set('pageSize', pageSize.toString())
-        }).pipe(
-            map(res => res["payload"])
-        );
+    updateVehicle( vehicle ) {
+        var url: string = "/api/vehicles/" + vehicle.vehicleId.toString();
+        return this.http.put( url, this.vehicle )  
+            .pipe( map( ( response: Vehicle ) => {
+            this.vehicle = new Vehicle();
+            return true;
+        }));
     }
     
     loadVehicle( vehicle ) {
@@ -88,15 +90,14 @@ export class DataService {
         }));
     }
     
-    // There is a bug here where using the vehicleID will cause errors when adding vehicles back to the database and the IDs
-    // being the same. May need to figure out some other way of indexing or renumbering upon deletion in the MVC portion of the app
-    // whenever HttpDelete is called?
     deleteVehicle( vehicle ) {
-        return this.http.delete( "/api/vehicles/" + vehicle.vehicleId.toString().pipe( 
+        var url: string = "/api/vehicles/" + vehicle.vehicleId.toString();
+        return this.http.delete( url ).pipe( 
             map( ( response: Vehicle ) => {
-                this.loadVehicles();
+                this.vehicle = new Vehicle();
+                return true;
             })
-        ) );
+        );
     }
     
     loadModifications(): Observable<boolean> {
@@ -119,16 +120,20 @@ export class DataService {
         this.order.modifications.push( mod );
     }
     
+    public removeFromOrder( modification : Modification)
+    {
+        this.order.modifications.splice( this.order.modifications.indexOf( modification ), 1 );
+    }
+    
     public addVehicleToOrder( newVehicle: Vehicle )
     {
         var veh : Vehicle = new Vehicle();
-        
-        veh.vehicleId = this.vehicles.length+1;
+        veh.vehicleId = newVehicle.vehicleId;
         veh.ownerName = newVehicle.ownerName;
         veh.engineRunning = true;
         veh.date = new Date();
         veh.fileName = "dodgeCharger.jpg";
-        veh.vehicleType = 1;
+        //veh.vehicleType = 1;
         veh.horsepower = newVehicle.horsepower;
         veh.torque = newVehicle.torque;
         
