@@ -35,8 +35,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function AddVehicle_option_28_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "option", 22);
+function AddVehicle_option_31_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "option", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -93,77 +93,81 @@ var AddVehicle = /** @class */ (function () {
         }
     };
     AddVehicle.ɵfac = function AddVehicle_Factory(t) { return new (t || AddVehicle)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"])); };
-    AddVehicle.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AddVehicle, selectors: [["addVehicle"]], decls: 40, vars: 12, consts: [[1, "row"], ["novalidate", "", 3, "ngSubmit"], ["vehicleForm", "ngForm"], [1, "form-group"], ["for", "ownerName"], ["type", "text", "id", "ownerName", "required", "", "name", "ownerName", 1, "form-control", 3, "ngModel", "ngModelChange"], ["ownerName", "ngModel"], [1, "alert", "alert-danger", 3, "hidden"], ["for", "horsePower"], ["type", "number", "id", "horsePower", "required", "", "name", "horsepower", 1, "form-control", 3, "ngModel", "ngModelChange"], ["horsePower", "ngModel"], ["for", "torque"], ["type", "number", "id", "torque", "required", "", "name", "torque", 1, "form-control", 3, "ngModel", "ngModelChange"], ["torque", "ngModel"], ["for", "vehicleType"], ["id", "vehicleType", "required", "", "name", "vehicleType", 1, "form-control", 3, "ngModel", "ngModelChange"], ["vehicleType", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "engineRunning"], ["type", "checkbox", "id", "engineRunning", "name", "engineRunning", "ng-model", "checked", 1, "form-control", 3, "ngModel", "ngModelChange"], ["engineRunning", "ngModel"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], [3, "value"]], template: function AddVehicle_Template(rf, ctx) { if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "form", 1, 2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function AddVehicle_Template_form_ngSubmit_1_listener() { return ctx.gotoCheckout(); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "label", 4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Owner Name");
+    AddVehicle.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AddVehicle, selectors: [["addVehicle"]], decls: 43, vars: 12, consts: [["align", "left"], ["align", "center", 1, "row"], ["novalidate", "", 3, "ngSubmit"], ["vehicleForm", "ngForm"], [1, "form-group"], ["for", "ownerName"], ["type", "text", "id", "ownerName", "required", "", "name", "ownerName", 1, "form-control", 3, "ngModel", "ngModelChange"], ["ownerName", "ngModel"], [1, "alert", "alert-danger", 3, "hidden"], ["for", "horsePower"], ["type", "number", "id", "horsePower", "required", "", "name", "horsepower", 1, "form-control", 3, "ngModel", "ngModelChange"], ["horsePower", "ngModel"], ["for", "torque"], ["type", "number", "id", "torque", "required", "", "name", "torque", 1, "form-control", 3, "ngModel", "ngModelChange"], ["torque", "ngModel"], ["for", "vehicleType"], ["id", "vehicleType", "required", "", "name", "vehicleType", 1, "form-control", 3, "ngModel", "ngModelChange"], ["vehicleType", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "engineRunning"], ["type", "checkbox", "id", "engineRunning", "name", "engineRunning", 1, "form-control", 3, "ngModel", "ngModelChange"], ["engineRunning", "ngModel"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], [3, "value"]], template: function AddVehicle_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "h3", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Add a Vehicle");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "input", 5, 6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_6_listener($event) { return ctx.model.ownerName = $event; });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "form", 2, 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function AddVehicle_Template_form_ngSubmit_4_listener() { return ctx.gotoCheckout(); });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "label", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Owner Name");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " Owner Name is required. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "input", 6, 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_9_listener($event) { return ctx.model.ownerName = $event; });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "label", 8);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Horsepower:");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "input", 9, 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_13_listener($event) { return ctx.model.horsepower = $event; });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Horsepower value is required. ");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "label", 11);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Torque:");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "input", 12, 13);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_19_listener($event) { return ctx.model.torque = $event; });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Torque value is required ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " Owner Name is required. ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "label", 14);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Vehicle Type");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "label", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Horsepower:");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "select", 15, 16);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_select_ngModelChange_26_listener($event) { return ctx.model.vehicleType = $event; });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, AddVehicle_option_28_Template, 2, 2, "option", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "input", 10, 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_16_listener($event) { return ctx.model.horsepower = $event; });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " Vehicle type is required. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " Horsepower value is required. ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "label", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Torque:");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "label", 18);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Engine Running");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "input", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_22_listener($event) { return ctx.model.torque = $event; });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "input", 19, 20);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_34_listener($event) { return ctx.model.engineRunning = $event; });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " Engine running status is required. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " Torque value is required ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "button", 21);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "Submit ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "label", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Vehicle Type");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "select", 16, 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_select_ngModelChange_29_listener($event) { return ctx.model.vehicleType = $event; });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, AddVehicle_option_31_Template, 2, 2, "option", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " Vehicle type is required. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "label", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Engine Running");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "input", 20, 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddVehicle_Template_input_ngModelChange_37_listener($event) { return ctx.model.engineRunning = $event; });
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " Engine running status is required. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "button", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Add Vehicle ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
-            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](2);
-            var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](7);
-            var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](14);
-            var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](20);
-            var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](27);
-            var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](35);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+            var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](5);
+            var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](10);
+            var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](17);
+            var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](23);
+            var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](30);
+            var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](38);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.model.ownerName);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("hidden", _r1.valid || _r1.pristine);
@@ -187,7 +191,7 @@ var AddVehicle = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("hidden", _r6.valid || _r6.pristine);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", !_r0.form.valid);
-        } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["SelectControlValueAccessor"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_x"]], encapsulation: 2 });
+        } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgForm"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["SelectControlValueAccessor"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgSelectOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_x"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJDbGllbnRBcHAvYXBwL2FkZC9hZGRWZWhpY2xlLmNvbXBvbmVudC5jc3MifQ== */"] });
     return AddVehicle;
 }());
 
@@ -196,6 +200,7 @@ var AddVehicle = /** @class */ (function () {
         args: [{
                 selector: "addVehicle",
                 templateUrl: "addVehicle.component.html",
+                styleUrls: ["addVehicle.component.css"]
             }]
     }], function () { return [{ type: _shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }]; }, null); })();
 
@@ -418,16 +423,16 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
     }
     AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-    AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["the-garage"]], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+    AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet");
-        } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJDbGllbnRBcHAvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
+        } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: [".ng-valid[required][_ngcontent-%COMP%], .ng-valid.required[_ngcontent-%COMP%] {\r\n    border-left: 5px solid #42A948; \r\n}\r\n\r\n.ng-invalid[_ngcontent-%COMP%]:not(form) {\r\n    border-left: 5px solid #a94442; \r\n}\r\n\r\n.label[_ngcontent-%COMP%] {\r\n    font-weight: bold;\r\n}\r\n\r\n.form-group[_ngcontent-%COMP%] {\r\n    font-weight: bold;\r\n}\r\n\r\n.table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\r\n    font-family: monospace;\r\n    font-size: small;\r\n}\r\n\r\n.table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\r\n    font-size: small;\r\n}\r\n\r\n.vehicle-info[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n    max-width: 100px;\r\n    float: left;\r\n    margin: 0 2px;\r\n    border: solid 1px black;\r\n}\r\n\r\n.vehicle-info[_ngcontent-%COMP%]   .vehicle-name[_ngcontent-%COMP%] {\r\n    font-size: medium;\r\n    font-weight: bold;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNsaWVudEFwcC9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsOEVBQThFOztBQUU5RTtJQUNJLDhCQUE4QixFQUFFLFVBQVU7QUFDOUM7O0FBRUE7SUFDSSw4QkFBOEIsRUFBRSxRQUFRO0FBQzVDOztBQUVBO0lBQ0ksaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsYUFBYTtJQUNiLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixpQkFBaUI7QUFDckIiLCJmaWxlIjoiQ2xpZW50QXBwL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cclxuXHJcbi5uZy12YWxpZFtyZXF1aXJlZF0sIC5uZy12YWxpZC5yZXF1aXJlZCB7XHJcbiAgICBib3JkZXItbGVmdDogNXB4IHNvbGlkICM0MkE5NDg7IC8qIGdyZWVuICovXHJcbn1cclxuXHJcbi5uZy1pbnZhbGlkOm5vdChmb3JtKSB7XHJcbiAgICBib3JkZXItbGVmdDogNXB4IHNvbGlkICNhOTQ0NDI7IC8qIHJlZCAqL1xyXG59XHJcblxyXG4ubGFiZWwge1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbi5mb3JtLWdyb3VwIHtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4udGFibGUgdGQge1xyXG4gICAgZm9udC1mYW1pbHk6IG1vbm9zcGFjZTtcclxuICAgIGZvbnQtc2l6ZTogc21hbGw7XHJcbn1cclxuXHJcbi50YWJsZSB0aCB7XHJcbiAgICBmb250LXNpemU6IHNtYWxsO1xyXG59XHJcblxyXG4udmVoaWNsZS1pbmZvIGltZyB7XHJcbiAgICBtYXgtd2lkdGg6IDEwMHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBtYXJnaW46IDAgMnB4O1xyXG4gICAgYm9yZGVyOiBzb2xpZCAxcHggYmxhY2s7XHJcbn1cclxuXHJcbi52ZWhpY2xlLWluZm8gLnZlaGljbGUtbmFtZSB7XHJcbiAgICBmb250LXNpemU6IG1lZGl1bTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcbiJdfQ== */"] });
     return AppComponent;
 }());
 
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
-                selector: 'the-garage',
+                selector: 'app-root',
                 templateUrl: './app.component.html',
                 styleUrls: ["./app.component.css"]
             }]
@@ -842,19 +847,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function VehicleList_tr_15_td_9_Template(rf, ctx) { if (rf & 1) {
+function VehicleList_tr_16_td_9_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Running");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function VehicleList_tr_15_td_10_Template(rf, ctx) { if (rf & 1) {
+function VehicleList_tr_16_td_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Stopped");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function VehicleList_tr_15_Template(rf, ctx) { if (rf & 1) {
+function VehicleList_tr_16_Template(rf, ctx) { if (rf & 1) {
     var _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "td");
@@ -869,12 +874,12 @@ function VehicleList_tr_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, VehicleList_tr_15_td_9_Template, 3, 0, "td", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, VehicleList_tr_15_td_10_Template, 3, 0, "td", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, VehicleList_tr_16_td_9_Template, 3, 0, "td", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, VehicleList_tr_16_td_10_Template, 3, 0, "td", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "button", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VehicleList_tr_15_Template_button_click_13_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); var v_r1 = ctx.$implicit; var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r4.onEdit(v_r1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VehicleList_tr_16_Template_button_click_13_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); var v_r1 = ctx.$implicit; var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r4.onEdit(v_r1); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "span", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "span", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, " Edit");
@@ -885,7 +890,7 @@ function VehicleList_tr_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "td");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VehicleList_tr_15_Template_button_click_19_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); var v_r1 = ctx.$implicit; var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.onDelete(v_r1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VehicleList_tr_16_Template_button_click_19_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5); var v_r1 = ctx.$implicit; var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.onDelete(v_r1); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "span", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "span", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Delete");
@@ -968,7 +973,7 @@ var VehicleList = /** @class */ (function () {
         return "Undefined";
     };
     VehicleList.ɵfac = function VehicleList_Factory(t) { return new (t || VehicleList)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
-    VehicleList.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VehicleList, selectors: [["vehicle-list"]], decls: 16, vars: 1, consts: [[1, "row"], [1, "vehicle-info", "table", "table-hover"], [1, "hidden-medium"], [4, "ngFor", "ngForOf"], ["class", "table-success", 4, "ngIf"], ["class", "table-warning", 4, "ngIf"], [1, "pull-right"], ["id", "editButton", 1, "btn", "btn-warning", "btn-sm", "margin-right", 3, "click"], [1, "glyphicon", "glyphicon-edit"], [1, "hidden-xs"], ["id", "deleteButton", 1, "btn", "btn-danger", "btn-sm", "margin-right", 3, "click"], [1, "glyphicon", "glyphicon-edit>"], [1, "table-success"], [1, "glyphicon", "glyphicon-success"], [1, "table-warning"], [1, "glyphicon", "glyphicon-remove"]], template: function VehicleList_Template(rf, ctx) { if (rf & 1) {
+    VehicleList.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VehicleList, selectors: [["vehicle-list"]], decls: 17, vars: 1, consts: [[1, "row"], [1, "vehicle-info", "table", "table-hover"], [1, "hidden-medium"], [4, "ngFor", "ngForOf"], ["class", "table-success", 4, "ngIf"], ["class", "table-warning", 4, "ngIf"], [1, "pull-right"], ["id", "editButton", 1, "btn", "btn-warning", "btn-sm", "margin-right", 3, "click"], [1, "glyphicon", "glyphicon-edit"], [1, "hidden-xs"], ["id", "deleteButton", 1, "btn", "btn-danger", "btn-sm", "margin-right", 3, "click"], [1, "glyphicon", "glyphicon-edit>"], [1, "table-success"], [1, "glyphicon", "glyphicon-success"], [1, "table-warning"], [1, "glyphicon", "glyphicon-remove"]], template: function VehicleList_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "table", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "tr");
@@ -988,16 +993,17 @@ var VehicleList = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Engine Status");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "th", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "th", 2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "tbody");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, VehicleList_tr_15_Template, 23, 6, "tr", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "tbody");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, VehicleList_tr_16_Template, 23, 6, "tr", 3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](16);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.vehicles);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: [".vehicle-info[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n    max-width: 100px;\r\n    float: left;\r\n    margin: 0 2px;\r\n    border: solid 1px black;\r\n}\r\n\r\n.vehicle-info[_ngcontent-%COMP%]   .vehicle-name[_ngcontent-%COMP%] {\r\n    font-size: large;\r\n    font-weight: bold;\r\n}\r\n\r\n.table[_ngcontent-%COMP%]   tbody[_ngcontent-%COMP%] {\r\n   font-size: small; \r\n}\r\n\r\n.table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%] {\r\n    max-height: 10px;\r\n    line-height: 10px;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNsaWVudEFwcC9hcHAvZ2FyYWdlL3ZlaGljbGVMaXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsV0FBVztJQUNYLGFBQWE7SUFDYix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsaUJBQWlCO0FBQ3JCOztBQUVBO0dBQ0csZ0JBQWdCO0FBQ25COztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGlCQUFpQjtBQUNyQiIsImZpbGUiOiJDbGllbnRBcHAvYXBwL2dhcmFnZS92ZWhpY2xlTGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnZlaGljbGUtaW5mbyBpbWcge1xyXG4gICAgbWF4LXdpZHRoOiAxMDBweDtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgbWFyZ2luOiAwIDJweDtcclxuICAgIGJvcmRlcjogc29saWQgMXB4IGJsYWNrO1xyXG59XHJcblxyXG4udmVoaWNsZS1pbmZvIC52ZWhpY2xlLW5hbWUge1xyXG4gICAgZm9udC1zaXplOiBsYXJnZTtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG59XHJcblxyXG4udGFibGUgdGJvZHkge1xyXG4gICBmb250LXNpemU6IHNtYWxsOyBcclxufVxyXG5cclxuLnRhYmxlIHRyIHtcclxuICAgIG1heC1oZWlnaHQ6IDEwcHg7XHJcbiAgICBsaW5lLWhlaWdodDogMTBweDtcclxufSJdfQ== */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"]], styles: [".vehicle-info[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n    max-width: 100px;\r\n    float: left;\r\n    margin: 0 2px;\r\n    border: solid 1px black;\r\n}\r\n\r\n.vehicle-info[_ngcontent-%COMP%]   .vehicle-name[_ngcontent-%COMP%] {\r\n    font-size: large;\r\n    font-weight: bold;\r\n}\r\n\r\n.table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\r\n    font-size: small;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNsaWVudEFwcC9hcHAvZ2FyYWdlL3ZlaGljbGVMaXN0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsV0FBVztJQUNYLGFBQWE7SUFDYix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6IkNsaWVudEFwcC9hcHAvZ2FyYWdlL3ZlaGljbGVMaXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudmVoaWNsZS1pbmZvIGltZyB7XHJcbiAgICBtYXgtd2lkdGg6IDEwMHB4O1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbiAgICBtYXJnaW46IDAgMnB4O1xyXG4gICAgYm9yZGVyOiBzb2xpZCAxcHggYmxhY2s7XHJcbn1cclxuXHJcbi52ZWhpY2xlLWluZm8gLnZlaGljbGUtbmFtZSB7XHJcbiAgICBmb250LXNpemU6IGxhcmdlO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbi50YWJsZSB0aCB7XHJcbiAgICBmb250LXNpemU6IHNtYWxsO1xyXG59Il19 */"] });
     return VehicleList;
 }());
 
@@ -1042,13 +1048,14 @@ var Garage = /** @class */ (function () {
         this.data = data;
     }
     Garage.ɵfac = function Garage_Factory(t) { return new (t || Garage)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_dataService__WEBPACK_IMPORTED_MODULE_1__["DataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"])); };
-    Garage.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Garage, selectors: [["the-garage"]], decls: 5, vars: 0, consts: [[1, "row"], [1, "col-sm-4"], [1, "col-sm-8"]], template: function Garage_Template(rf, ctx) { if (rf & 1) {
+    Garage.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Garage, selectors: [["the-garage"]], decls: 6, vars: 0, consts: [[1, "row"], [1, "col-sm-3"], [1, "col-sm-9"]], template: function Garage_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "addVehicle");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "vehicle-list");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "vehicle-list");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } }, directives: [_add_addVehicle_component__WEBPACK_IMPORTED_MODULE_3__["AddVehicle"], _vehicleList_component__WEBPACK_IMPORTED_MODULE_4__["VehicleList"]], encapsulation: 2 });

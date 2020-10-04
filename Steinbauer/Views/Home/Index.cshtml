@@ -2,7 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@model IEnumerable<Steinbauer.Data.Entities.Vehicle> 
+
+@section Scripts {
+    <script src="~/clientapp/runtime.js"></script>
+    <script src="~/clientapp/polyfills.js"></script>
+    <script src="~/clientapp/styles.js"></script>
+    <script src="~/clientapp/vendor.js"></script>
+    <script src="~/clientapp/main.js"></script>
+}
+
+<h1>Browse the Garage</h1>
+<app-root></app-root>

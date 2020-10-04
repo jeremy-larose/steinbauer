@@ -25,6 +25,7 @@
         <e p="ClientApp" t="Include">
           <e p="app" t="Include">
             <e p="add" t="Include">
+              <e p="addVehicle.component.css" t="Include" />
               <e p="addVehicle.component.html" t="Include" />
               <e p="addVehicle.component.ts" t="Include" />
             </e>
@@ -46,7 +47,6 @@
             <e p="garage" t="Include">
               <e p="cart.component.html" t="Include" />
               <e p="cart.component.ts" t="Include" />
-              <e p="garage.component.css" t="Include" />
               <e p="garage.component.html" t="Include" />
               <e p="garage.component.ts" t="Include" />
               <e p="modificationList.component.css" t="Include" />
@@ -55,6 +55,10 @@
               <e p="vehicleList.component.css" t="Include" />
               <e p="vehicleList.component.html" t="Include" />
               <e p="vehicleList.component.ts" t="Include" />
+            </e>
+            <e p="img" t="Include">
+              <e p="check.png" t="Include" />
+              <e p="x.png" t="Include" />
             </e>
             <e p="login" t="Include">
               <e p="login.component.html" t="Include" />

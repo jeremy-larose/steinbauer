@@ -7,6 +7,8 @@ import {VehicleType} from "../app.component";
 @Component({
     selector: "addVehicle",
     templateUrl: "addVehicle.component.html",
+    styleUrls: [ "addVehicle.component.css" ]
+
 })
 
 export class AddVehicle {

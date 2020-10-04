@@ -1,4 +1,7 @@
-<div class="row">
+<br/>
+<h3 align="left">Add a Vehicle</h3>
+
+<div class="row" align="center">
     <form (ngSubmit)="gotoCheckout()" #vehicleForm="ngForm" novalidate>
         <div class="form-group">
             <label for="ownerName">Owner Name</label>
@@ -42,12 +45,12 @@
         <div class="form-group">
             <label for="engineRunning">Engine Running</label>
             <input type="checkbox" class="form-control" id="engineRunning"
-                   [(ngModel)]="model.engineRunning" name="engineRunning" #engineRunning="ngModel" ng-model="checked">
+                   [(ngModel)]="model.engineRunning" name="engineRunning" #engineRunning="ngModel">
             <div [hidden]="engineRunning.valid || engineRunning.pristine" class="alert alert-danger">
                 Engine running status is required.
             </div>
         </div>
-        <button type="submit" class="btn btn-success" [disabled]="!vehicleForm.form.valid">Submit
+        <button type="submit" class="btn btn-success" [disabled]="!vehicleForm.form.valid">Add Vehicle
         </button>
     </form>
 

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'the-garage',
+  selector: 'app-root',
   templateUrl: './app.component.html',
     styleUrls: [ "./app.component.css" ]
 })

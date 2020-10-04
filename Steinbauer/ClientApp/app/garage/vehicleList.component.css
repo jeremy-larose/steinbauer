@@ -10,11 +10,6 @@
     font-weight: bold;
 }
 
-.table tbody {
-   font-size: small; 
-}
-
-.table tr {
-    max-height: 10px;
-    line-height: 10px;
+.table th {
+    font-size: small;
 }
