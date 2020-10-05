@@ -8,28 +8,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e2c63f2-99ee-4d4f-a8f9-cfc9eedf4c33" name="Default Changelist" comment="Added functionality for PUT Api.&#10;Reorganized landing page to create in-app refresh after delete/add buttons so user never gets removed from page.">
-      <change afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/img/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/img/x.png" afterDir="false" />
+    <list default="true" id="0e2c63f2-99ee-4d4f-a8f9-cfc9eedf4c33" name="Default Changelist" comment="CSS Styling -- Pre-Modification Implementation">
+      <change afterPath="$PROJECT_DIR$/Steinbauer/Controllers/ModificationsController - Copy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Steinbauer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/garage.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/garage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/garage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Steinbauer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Steinbauer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Views/App/Vehicles.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Views/App/Vehicles.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/cart.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/cart.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/dataService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/dataService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/vehicle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/vehicle.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Controllers/ModificationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Controllers/ModificationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Controllers/VehicleModsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Controllers/VehicleModsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Data/Entities/Modification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Data/Entities/Modification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steinbauer/Services/DataGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/Services/DataGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Steinbauer/wwwroot/ClientApp/styles.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +46,18 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="JSON File" />
+        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -76,16 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/add.component.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" />
-        <option value="$PROJECT_DIR$/Steinbauer/Data/Entities/Order.cs" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/order.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.html" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/steinbauer-app-theme.css" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/steinbauer-app-theme.scss" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/material.module.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/styles.scss" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/theme.scss" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/VehiclesDataSource.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/CourseComponent.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/CourseComponent.ts" />
@@ -96,26 +96,15 @@
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/vehicle-form.component.html" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/vehicle-form.component.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/Services/DataGenerator.cs" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/vehicle.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/Data/ISteinbauerRepository.cs" />
-        <option value="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" />
-        <option value="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/Data/Entities/Vehicle.cs" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.css" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.html" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/garage.component.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.module.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.html" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/dataService.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.html" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/Views/App/Vehicles.cshtml" />
         <option value="$PROJECT_DIR$/Steinbauer/Views/Home/Index.cshtml" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.ts" />
-        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.ts" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component..css" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.css" />
         <option value="$PROJECT_DIR$/Steinbauer/wwwroot/css/site.css" />
@@ -127,6 +116,27 @@
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.component.css" />
         <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/add/addVehicle.component.html" />
         <option value="$PROJECT_DIR$/Steinbauer/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/vehicleList.component.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/vehicle.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/Data/VehiclesRepository.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/Startup.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/Data/Entities/Modification.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/cart.component.html" />
+        <option value="$PROJECT_DIR$/Steinbauer/ViewModels/VehicleViewModel.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/Controllers/ModificationsController - Copy.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/Controllers/VehiclesController.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/order.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.html" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/shared/dataService.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/Controllers/ModificationsController.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.html" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/checkout/checkout.component.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.html" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/edit/edit.component.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/ClientApp/app/garage/modificationList.component.ts" />
+        <option value="$PROJECT_DIR$/Steinbauer/Data/SteinbauerMappingProfile.cs" />
+        <option value="$PROJECT_DIR$/Steinbauer/Controllers/VehicleModsController.cs" />
       </list>
     </option>
   </component>
@@ -201,7 +211,7 @@
       <workItem from="1601416315997" duration="42529000" />
       <workItem from="1601645499079" duration="27145000" />
       <workItem from="1601736947845" duration="39201000" />
-      <workItem from="1601823912912" duration="15741000" />
+      <workItem from="1601823912912" duration="39614000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1601137051694</created>
@@ -252,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601834547285</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="CSS Styling -- Pre-Modification Implementation">
+      <created>1601840595848</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601840595848</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +299,8 @@
     <MESSAGE value="Updated App" />
     <MESSAGE value="Added functionality for Delete as well as got a working copy of the Add functions in the angular portion of the client." />
     <MESSAGE value="Added functionality for PUT Api.&#10;Reorganized landing page to create in-app refresh after delete/add buttons so user never gets removed from page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for PUT Api.&#10;Reorganized landing page to create in-app refresh after delete/add buttons so user never gets removed from page." />
+    <MESSAGE value="CSS Styling -- Pre-Modification Implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS Styling -- Pre-Modification Implementation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="824" y="353" key="#File_Watchers" timestamp="1601514451390">
@@ -297,90 +315,90 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="586" y="298" key="EditFileWatcherDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601514443001" />
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1601840290423">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1601876511141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304808" />
-    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601840290423" />
-    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1601840290423">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601876511141" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1601876511140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304807" />
-    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601840290423" />
-    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1601840290423">
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601876511140" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1601876511140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304807" />
-    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601840290423" />
-    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1601840290423">
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601876511140" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1601876511141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601050304807" />
-    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601840290423" />
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1601827213435">
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601876511141" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1601870097611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1601827213436">
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097611" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213436" />
-    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1601827213435">
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213435" />
-    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1601827213436">
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213436" />
-    <state width="1877" height="375" key="GridCell.Tab.4.bottom" timestamp="1601827213436">
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.4.bottom" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213436" />
-    <state width="1877" height="375" key="GridCell.Tab.4.center" timestamp="1601827213436">
+    <state width="1877" height="375" key="GridCell.Tab.4.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.4.center" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213436" />
-    <state width="1877" height="375" key="GridCell.Tab.4.left" timestamp="1601827213436">
+    <state width="1877" height="375" key="GridCell.Tab.4.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.4.left" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213436" />
-    <state width="1877" height="375" key="GridCell.Tab.4.right" timestamp="1601827213436">
+    <state width="1877" height="375" key="GridCell.Tab.4.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
+    <state width="1877" height="375" key="GridCell.Tab.4.right" timestamp="1601870097612">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601827213436" />
+    <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601870097612" />
     <state x="552" y="251" key="Rider.ProjectTemplateDialog.Size" timestamp="1600996329671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -397,10 +415,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601689702656" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1601415985817">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1601840826434">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601415985817" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601840826434" />
     <state x="735" y="254" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1601216011360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -417,9 +435,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601829871854" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601746360411">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601850718531">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601746360411" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601850718531" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#Steinbauer.Controllers.ModificationsController.Delete" memberName="e" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

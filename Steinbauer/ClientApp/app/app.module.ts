@@ -5,22 +5,21 @@ import { AppComponent } from './app.component';
 import { VehicleList } from "./garage/vehicleList.component";
 import { ModificationList } from "./garage/modificationList.component";
 import { DataService } from "./shared/dataService";
-import { Cart } from "./garage/cart.component";
 import { RouterModule } from "@angular/router";
 import { Garage } from "./garage/garage.component";
-import { Checkout } from "./checkout/checkout.component";
 import { Login } from "./login/login.component";
 import { Edit } from "./edit/edit.component";
 import { AddVehicle } from "./add/addVehicle.component";
 import { FormsModule } from "@angular/forms";
+import {Checkout} from "./checkout/checkout.component";
 
 let routes = [
   { path: "", component: Garage },
-  { path: "checkout", component: Checkout },
   { path: "login", component: Login },
   { path: "edit", component: Edit },
   { path: "addVehicle", component: AddVehicle },
     { path: "garage", component: Garage },
+    { path: "checkout", component: Checkout },
     { path: "app", component: AppComponent }
 ];
 
@@ -29,12 +28,11 @@ let routes = [
     AppComponent,
     VehicleList,
     ModificationList,
-    Cart,
     Garage,
-    Checkout,
     Login,
     Edit,
       AddVehicle,
+      Checkout
   ],
     imports: [
         BrowserModule,

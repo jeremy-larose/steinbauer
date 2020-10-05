@@ -49,22 +49,15 @@ namespace Steinbauer.Controllers
         }
 
         [HttpPut("{id:int}")]
-        [ActionName( nameof( Get ))]
-
-        public IActionResult Put( VehicleViewModel vehicle, int id )
+        public IActionResult Put( VehicleViewModel vehicleViewModel, int id )
         {
             try
             {
                 if ( ModelState.IsValid )
                 {
-                    
-                    var vehicleChanges = _mapper.Map<VehicleViewModel, Vehicle>(vehicle);
-                    //_mapper.Map(vehicle, existingVehicle);
-                    Vehicle vehicleToUpdate = _repository.GetVehicleById(id);
-
-                    _context.Entry( vehicleToUpdate ).CurrentValues.SetValues( vehicleChanges );
-                    _context.Entry( vehicleToUpdate ).State = EntityState.Modified;
-
+                    var vehicleChanges = _mapper.Map<VehicleViewModel, Vehicle>(vehicleViewModel);
+                    _context.Vehicles.Attach(vehicleChanges);
+                    _context.Entry( vehicleChanges ).State = EntityState.Modified;
                     _context.SaveChanges();
                     return Ok();
                 }
@@ -142,31 +135,6 @@ namespace Steinbauer.Controllers
             {
                 _logger.LogInformation( $"Failed to create new vehicle: {e}");
                 return BadRequest("Failed to add new vehicle to database. ");
-            }
-        }
-        
-        public IActionResult AddModification(ModificationViewModel modification)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    var newMod = _mapper.Map<ModificationViewModel, Modification>(modification);
-                    _context.Modifications.Add(newMod);
-                    _repository.AddEntity(newMod);
-                    _context.SaveChanges();
-                    return Created($"/api/mods/{newMod.Id}",
-                        _mapper.Map<Modification, ModificationViewModel>(newMod));
-                }
-                else
-                {
-                    return BadRequest(ModelState);
-                }
-            }
-            catch( Exception e )
-            {
-                _logger.LogInformation( $"Failed to create new modification: {e}");
-                return BadRequest("Failed to add new modification to database. ");
             }
         }
     }

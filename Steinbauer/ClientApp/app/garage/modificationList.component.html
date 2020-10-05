@@ -1,9 +1,27 @@
-<div class="row modification-info">
-    <div class="col-md-4 well well-sm" *ngFor="let m of modifications">
-        <div class="modification-name">{{ m.modificationName}}</div>
-        <div><strong>Horsepower Gains:</strong> {{m.horsepower}}</div>
-        <div><strong>Torque:</strong> {{m.torque}}</div>
-        <button id="addButton" class="btn btn-success btn-sm pull-right" (click)="addModificationToOrder(m)" >Add</button>
-        <button id="removeButton" class="btn btn-danger btn-sm pull-left" (click)="removeModification(m)">Remove</button>
+<h3 align="center">Modifications</h3>
+<div class="card">
+    <div class="row modification-info">
+        <div class="col-md-6 well well-sm">
+            <h3>Available</h3>
+            <div *ngFor="let m of this.modifications">
+                <div class="modification-name">{{ m.modificationName}}</div>
+                <div><strong>Horsepower Gains:</strong> {{m.horsepower}}</div>
+                <div><strong>Torque:</strong> {{m.torque}}</div>
+                <button id="addToVehicleButton" class="btn btn-success btn-sm pull-right"
+                        (click)="addModToOrder(m)">Add
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6 well well-sm">
+            <h3>Installed</h3>
+            <div *ngFor="let i of vehicle.modifications">
+                <div class="modification-name">{{ i.modificationName}}</div>
+                <div><strong>Horsepower Gained:</strong> {{i.horsepower}}</div>
+                <div><strong>Torque Gained:</strong>{{i.torque}}</div>
+                <button id="removeFromVehicleButton" class="btn btn-danger btn-sm pull-right"
+                        (click)="removeModFromVehicle(i.modificationId)">Remove
+                </button>
+            </div>
+        </div>
     </div>
 </div>

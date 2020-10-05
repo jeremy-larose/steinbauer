@@ -1,24 +1,19 @@
-import { Component } from "@angular/core";
-import { DataService } from '../shared/dataService';
-import { Router } from "@angular/router";
+import {Component, OnInit, ViewChild} from "@angular/core";
+import { DataService } from "../shared/dataService";
+import {Router} from "@angular/router";
+import {Vehicle} from "../shared/vehicle";
+import {VehicleType} from "../app.component";
+import {Order} from "../shared/order";
 
-@Component( {
+@Component({
     selector: "checkout",
     templateUrl: "checkout.component.html",
-    styleUrls: ['checkout.component.css']
 })
 
 export class Checkout {
-    constructor( public data: DataService, public router: Router ) {
+    constructor(public data: DataService, public router: Router) {
+        this.order = data.order;
     }
-    
-    errorMessage: string = "";
-    
-    confirmVehicle() {
-        this.data.checkoutVehicle().subscribe( success => {
-            if ( success ) {
-                this.router.navigate( ["garage"]);
-            }
-        }, err => this.errorMessage = "Failed to save order.");
-    }
+
+    public order: Order;
 }

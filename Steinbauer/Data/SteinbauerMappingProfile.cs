@@ -16,12 +16,16 @@ namespace Steinbauer.Data
                 .ForMember( v=>v.VehicleType, ex => ex.MapFrom( v=>v.VehicleType ))
                 .ForMember( v=>v.Horsepower, ex => ex.MapFrom( v=>v.Horsepower))
                 .ForMember( v=>v.Torque, ex => ex.MapFrom( v=>v.Torque))
-                .ReverseMap();
+                .ReverseMap() 
+                .ForMember( v=>v.Modifications, opt => opt.Ignore());
 
+            
             CreateMap<Modification, ModificationViewModel>()
-                .ForMember(m => m.ModificationId, ex => ex.MapFrom(m => m.Id))
+                .ForMember(m => m.ModificationId, ex => ex.MapFrom(m => m.ModId))
                 .ForMember(m => m.ModificationName, ex => ex.MapFrom(m => m.ModName))
-                .ReverseMap();
+                .ForMember( m=> m.Torque, ex => ex.MapFrom( m=> m.Torque ))
+                .ForMember( m=>m.Horsepower, ex => ex.MapFrom( m=>m.Horsepower ))
+                .ReverseMap(); 
         }
     }
 }

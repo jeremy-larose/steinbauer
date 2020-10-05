@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Steinbauer.Data;
 using Steinbauer.Data.Entities;
@@ -9,82 +11,70 @@ using Steinbauer.ViewModels;
 
 namespace Steinbauer.Controllers
 {
-    [Route( "api/mods/")]
+    [Route( "/api/mods/")]
     [ApiController]
     [Produces( "application/json")]
-
     public class ModificationsController : Controller
     {
-        private readonly SteinbauerDbContext _context;
         private readonly ISteinbauerRepository _repository;
-        private readonly ILogger<ModificationsController> _logger;
+        private readonly ILogger<VehicleModsController> _logger;
         private readonly IMapper _mapper;
+        private readonly SteinbauerDbContext _context;
 
-        public ModificationsController(ISteinbauerRepository vehiclesRepository, ILogger<ModificationsController> logger, IMapper mapper, SteinbauerDbContext context )
+        public ModificationsController(ISteinbauerRepository repository, ILogger<VehicleModsController> logger,
+            IMapper mapper, SteinbauerDbContext context )
         {
-            _repository = vehiclesRepository;
-            _context = context;
+            _repository = repository;
             _logger = logger;
             _mapper = mapper;
+            _context = context;
         }
         
         [HttpGet]
-        [ProducesResponseType(200)]
         public IActionResult Get()
         {
-            try
+            var modifications = _repository.GetAllModifications();
+            if (modifications != null)
             {
-                var results = _repository.GetAllModifications();
-                return Ok(
-                    _mapper.Map<IEnumerable<Modification>, IEnumerable<ModificationViewModel>>( results ));
+                return Ok(_mapper.Map<IEnumerable<Modification>, IEnumerable<ModificationViewModel>>(modifications));
             }
-            catch (Exception e)
+            else
             {
-                _logger.LogError( $"Failed to get modifications: {e}");
-                return BadRequest("Failed to get modifications.");
+                return NotFound();
             }
         }
 
-        [HttpGet( "{id:int}")]
-        public IActionResult Get( int id )
+        [HttpGet("{modId}")]
+        public IActionResult Get(int modId)
         {
-            try
+            var modification = _repository.GetModificationById(modId);
+            if (modification != null)
             {
-                var mod = _repository.GetModificationById(id);
-                if (mod != null)
-                {
-                    return Ok(_mapper.Map<Modification, ModificationViewModel>(mod));
-                }
-                else
-                {
-                    return NotFound();
-                }
+                    return Ok(_mapper.Map<Modification, ModificationViewModel>(modification));
+            }
+            else
+            {
+                return NotFound();
+            }
+        } 
 
-            }
-            catch (Exception e)
-            {
-                _logger.LogError( $"Failed to get modification: {e}");
-                return BadRequest("Failed to get details on modification.");
-            }
-        }
-        
         [HttpPost]
-        [ActionName(nameof( Get ))]
-        public IActionResult AddModification( ModificationViewModel modification )
+        public IActionResult Post(ModificationViewModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var newModification = _mapper.Map<ModificationViewModel, Modification>(modification);
-                    _context.Modifications.Add(newModification);
-                    _context.SaveChanges();
-                    
-                    return Created($"/api/mods/{newModification.Id}", _mapper.Map<Modification, ModificationViewModel>(newModification));
+                    var newMod = _mapper.Map<ModificationViewModel, Modification>(model);
+
+                    _repository.AddEntity(newMod);
+                    _repository.SaveAll();
+
+                    return Created($"/api/mods/{newMod.ModId}", _mapper.Map<Modification, ModificationViewModel>(newMod));
                 }
                 else
                 {
-                    return BadRequest( ModelState );
+                    return BadRequest(ModelState);
                 }
             }
             catch (Exception e)
@@ -92,6 +82,6 @@ namespace Steinbauer.Controllers
                 _logger.LogInformation( $"Failed to create new modification: {e}");
                 return BadRequest("Failed to add new modification to database.");
             }
-        } 
-    }
+        }
+    }  
 }

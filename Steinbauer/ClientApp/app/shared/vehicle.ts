@@ -11,5 +11,5 @@ export class Vehicle {
     vehicleType: number;
     horsepower: number;
     torque: number;
-    modifications: Array<Modification> = new Array<Modification>();
+    modifications: Modification[];
 }

@@ -19,6 +19,7 @@ export class DataService {
     public order: Order = new Order();
     
     public vehicles: Vehicle[] = [];
+    public modification: Modification = new Modification();
     public modifications: Modification[] = [];
     
     public get loginRequired(): boolean { // We do not need login requirements for this app.
@@ -90,8 +91,19 @@ export class DataService {
         }));
     }
     
+    removeMod( vehicle, id ) {
+        var url: string = "/api/vehicles/" + vehicle.vehicleId.toString() + "/mods/" + id;
+        return this.http.delete( url ).pipe(
+            map( ( response: Modification ) => {
+                this.modification = new Modification();
+                return true;
+            })
+        );
+    }
+    
     deleteVehicle( vehicle ) {
         var url: string = "/api/vehicles/" + vehicle.vehicleId.toString();
+        this.http.delete( url );
         return this.http.delete( url ).pipe( 
             map( ( response: Vehicle ) => {
                 this.vehicle = new Vehicle();
@@ -138,7 +150,5 @@ export class DataService {
         veh.torque = newVehicle.torque;
         
         this.order.orderVehicle = veh;
-        
-        this.order.orderVehicles.push( veh );
     }
 }

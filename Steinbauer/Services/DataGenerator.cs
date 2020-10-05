@@ -40,14 +40,14 @@ namespace Steinbauer.Services
                                 Horsepower = 50,
                                 Torque = 50,
                                 ModName = "Supercharger",
-                                Id = 1
+                                ModId = 1
                             },
                             new Modification()
                             {
                                 Horsepower = 25,
                                 Torque = 100,
                                 ModName = "Diablo Tune",
-                                Id = 2
+                                ModId = 2
                             }
                         }
                     },
@@ -69,7 +69,7 @@ namespace Steinbauer.Services
                             Horsepower = 125,
                             Torque = 100,
                             ModName = "Turbocharged",
-                            Id = 3
+                            ModId = 3
                             }
                         }
                     },

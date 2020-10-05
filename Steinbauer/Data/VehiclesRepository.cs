@@ -38,7 +38,7 @@ namespace Steinbauer.Data
         public IEnumerable<Modification> GetAllModifications()
         {
             return _dbContext.Modifications
-                .OrderBy( m=> m.Id)
+                .OrderBy( m=> m.ModId)
                 .ToList();
         }
 
@@ -82,14 +82,13 @@ namespace Steinbauer.Data
         public Modification GetModificationById(int modId)
         {
             return _dbContext.Modifications
-                .FirstOrDefault(m => m.Id == modId);
+                .FirstOrDefault(m => m.ModId == modId);
         }
 
         public void UpdateVehicle( Vehicle vehicle )
         {
             try
             {
-                _dbContext.Entry( vehicle ).CurrentValues.SetValues( vehicle );
                 _dbContext.SaveChanges();
             }
             catch (Exception e)

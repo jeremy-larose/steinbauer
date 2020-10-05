@@ -13,6 +13,7 @@ import {NavigationEnd, Router} from "@angular/router";
 export class VehicleList implements OnInit {
     constructor(public data: DataService, private router: Router) {
         this.vehicles = data.vehicles;
+        
         this.router.routeReuseStrategy.shouldReuseRoute = function () {
             return false;
         };
@@ -21,7 +22,7 @@ export class VehicleList implements OnInit {
             if (event instanceof NavigationEnd) {
                 this.router.navigated = false;
             }
-        });
+        }); 
     }
 
     mySubscription: any;
@@ -48,7 +49,7 @@ export class VehicleList implements OnInit {
         if (this.mySubscription) {
             this.mySubscription.unsubscribe();
         }
-    }
+    } 
 
     displayEngineStatus(engineStatus) {
         if (engineStatus == true)

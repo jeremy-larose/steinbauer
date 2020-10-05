@@ -1,4 +1,4 @@
-<h3 align="center">Edit Vehicle</h3>
+<h3 align="center">Edit VehicleTest</h3>
 
 <div class="row-cols-md-12" align="center">
     <img src="/lib/img/{{data.vehicle.fileName}}" class="img-thumbnail"/>
@@ -26,7 +26,7 @@
                    required
                    [(ngModel)]="vehicle.torque" name="torque" #torque="ngModel">
             <div [hidden]="torque.valid || torque.pristine" class="alert alert-danger">
-                Torque value is required
+                Torque value is required.
             </div>
         </div>
 
@@ -51,11 +51,14 @@
                 Engine running status is required.
             </div>
         </div>
+        
+        <modification-list></modification-list>
         <button type="submit" class="btn btn-success" [disabled]="!vehicleForm.form.valid">Submit
         </button>
     </form>
+    
+    <button type="button" class="btn btn-warning" (click)="checkout()">TestCheckout</button>
     <br />
-    <modification-list></modification-list>
     <br />
     <br />
     <br />

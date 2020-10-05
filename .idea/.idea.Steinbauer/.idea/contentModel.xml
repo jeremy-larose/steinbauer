@@ -35,7 +35,6 @@
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
             <e p="checkout" t="Include">
-              <e p="checkout.component.css" t="Include" />
               <e p="checkout.component.html" t="Include" />
               <e p="checkout.component.ts" t="Include" />
             </e>
@@ -45,8 +44,6 @@
               <e p="edit.component.ts" t="Include" />
             </e>
             <e p="garage" t="Include">
-              <e p="cart.component.html" t="Include" />
-              <e p="cart.component.ts" t="Include" />
               <e p="garage.component.html" t="Include" />
               <e p="garage.component.ts" t="Include" />
               <e p="modificationList.component.css" t="Include" />
@@ -88,6 +85,7 @@
         <e p="Controllers" t="Include">
           <e p="AppController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="ModificationsController - Copy.cs" t="Include" />
           <e p="ModificationsController.cs" t="Include" />
           <e p="VehicleModsController.cs" t="Include" />
           <e p="VehiclesController.cs" t="Include" />
