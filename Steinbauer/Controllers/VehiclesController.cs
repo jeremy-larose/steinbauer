@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Logging;
 using Steinbauer.Data;
 using Steinbauer.Data.Entities;
@@ -49,31 +46,31 @@ namespace Steinbauer.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult Put( VehicleViewModel vehicleViewModel, int id )
+        public IActionResult Put(VehicleViewModel model, int id)
         {
             try
             {
-                if ( ModelState.IsValid )
+                if (ModelState.IsValid)
                 {
-                    var vehicleChanges = _mapper.Map<VehicleViewModel, Vehicle>(vehicleViewModel);
-                    _context.Vehicles.Attach(vehicleChanges);
-                    _context.Entry( vehicleChanges ).State = EntityState.Modified;
-                    _context.SaveChanges();
-                    return Ok();
+                    var oldVehicle = _repository.GetVehicleById(id);
+                    if (oldVehicle == null) return NotFound($"Could not find the vehicle at ID: {id} to update.");
+
+                    _mapper.Map(model, oldVehicle);
+
+                    _repository.SaveAll();
+                    return Ok(_mapper.Map<Vehicle, VehicleViewModel>(oldVehicle));
                 }
                 else
-                {
-                    _logger.LogError( $"Vehicle was not found at the id address: {id}");
-                    return NotFound();
+                {                
+                    return BadRequest("Model state is not valid.");
                 }
             }
             catch (Exception e)
             {
-                _logger.LogError( $"Failed to get vehicle to update: {e}");
-                return BadRequest("The vehicle to edit was not found.");
+                return BadRequest($"There was an error attempting to update the vehicle: {e}");
             }
         }
-        
+
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
         {
@@ -101,7 +98,7 @@ namespace Steinbauer.Controllers
         {
             try
             {
-                _repository.DeleteEntity( id ); 
+                _repository.DeleteEntity(id);
                 return Ok();
             }
             catch (Exception e)
@@ -110,9 +107,9 @@ namespace Steinbauer.Controllers
                 return BadRequest("Failed to delete vehicle.");
             }
         }
-        
+
         [HttpPost]
-        [ActionName( nameof( Get ))]
+        [ActionName(nameof(Get))]
         public IActionResult AddVehicle(VehicleViewModel vehicle)
         {
             try
@@ -131,9 +128,9 @@ namespace Steinbauer.Controllers
                     return BadRequest(ModelState);
                 }
             }
-            catch( Exception e )
+            catch (Exception e)
             {
-                _logger.LogInformation( $"Failed to create new vehicle: {e}");
+                _logger.LogInformation($"Failed to create new vehicle: {e}");
                 return BadRequest("Failed to add new vehicle to database. ");
             }
         }

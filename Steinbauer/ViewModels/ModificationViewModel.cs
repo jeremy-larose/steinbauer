@@ -1,5 +1,8 @@
-﻿namespace Steinbauer.ViewModels
+﻿using Steinbauer.Data.Entities;
+
+namespace Steinbauer.ViewModels
 {
+    
     public class ModificationViewModel
     {
         public int ModificationId { get; set; }

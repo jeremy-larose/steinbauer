@@ -14,7 +14,7 @@ namespace Steinbauer.Data.Entities
         Crossover = 3,
         Semi = 4
     }
-    
+
     public class Vehicle
     {
         public int Id { get; set; }
@@ -26,7 +26,6 @@ namespace Steinbauer.Data.Entities
         public string ImageFile { get; set; }
         public int Horsepower { get; set; }
         public int Torque { get; set; }
-        
         public ICollection<Modification> Modifications { get; set; }
     }
 }

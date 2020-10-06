@@ -10,13 +10,11 @@ namespace Steinbauer.Data
         IEnumerable<Modification> GetModsForVehicle( int id );
 
         Vehicle GetVehicleById(int id);
-        Modification GetModificationById(int id);
-
+        Modification GetModByVehicleId(int vehicleId, int modId);
+        Modification GetModById(int id);
         bool SaveAll();
         void AddEntity( object model );
         void DeleteEntity( int id );
-        void AddVehicle(Vehicle newVehicle);
-        void UpdateVehicle( Vehicle vehicle );
         void AddModification(Modification newMod);
     }
 }

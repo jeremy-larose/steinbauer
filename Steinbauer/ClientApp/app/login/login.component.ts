@@ -19,11 +19,7 @@ export class Login {
     onLogin() {
         this.data.login( this.creds )
             .subscribe( success => {
-                if( this.data.order.modifications.length == 0 ) {
                     this.router.navigate(["/"])
-                } else {
-                    this.router.navigate(["checkout"])
-                }
             }, err => this.errorMessage = "Failed to login.")
     }
 }

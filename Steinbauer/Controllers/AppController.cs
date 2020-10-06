@@ -8,7 +8,7 @@ namespace Steinbauer.Controllers
     {
         private readonly ISteinbauerRepository _repository;
 
-        public AppController( ISteinbauerRepository repository )
+        public AppController(ISteinbauerRepository repository)
         {
             _repository = repository;
         }
@@ -26,8 +26,8 @@ namespace Steinbauer.Controllers
         [Authorize]
         public IActionResult Shop()
         {
-            var results = _repository.GetAllVehicles( true );
-            return View( results );
+            var results = _repository.GetAllVehicles(true);
+            return View(results);
         }
 
         public IActionResult Add()

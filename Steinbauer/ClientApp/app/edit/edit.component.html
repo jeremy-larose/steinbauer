@@ -1,8 +1,10 @@
-<h3 align="center">Edit VehicleTest</h3>
+<h3 align="center">Edit Vehicle</h3>
 
-<div class="row-cols-md-12" align="center">
+<div class="card shadow row-cols-md-2">
     <img src="/lib/img/{{data.vehicle.fileName}}" class="img-thumbnail"/>
-    <form (ngSubmit)="onSubmit()" #vehicleForm="ngForm" novalidate>
+</div>
+<div>
+    <form (ngSubmit)="onSubmit()" #vehicleForm="ngForm">
         <div class="form-group">
             <label for="ownerName">Owner Name</label>
             <input type="text" class="form-control" id="ownerName"
@@ -14,14 +16,14 @@
         </div>
 
         <div class="form-group">
-            <label for="horsePower">Horsepower:</label>
+            <label for="horsePower">Base Horsepower:</label>
             <input type="number" class="form-control" id="horsePower"
                    required
                    [(ngModel)]="vehicle.horsepower" name="horsepower" #horsePower="ngModel">
             <div [hidden]="horsePower.valid || horsePower.pristine" class="alert alert-danger">
                 Horsepower value is required.
             </div>
-            <label for="torque">Torque:</label>
+            <label for="torque">Base Torque:</label>
             <input type="number" class="form-control" id="torque"
                    required
                    [(ngModel)]="vehicle.torque" name="torque" #torque="ngModel">
@@ -30,13 +32,13 @@
             </div>
         </div>
 
-
         <div class="form-group">
             <label for="vehicleType">Vehicle Type</label>
-            <select class="form-control" id="vehicleType" 
-                    required 
+            <select class="form-control" id="vehicleType"
+                    required
                     [(ngModel)]="vehicle.vehicleType" name="vehicleType" #vehicleType="ngModel">
-                <option *ngFor="let type of vehicleTypes" [value]="type">{{type}}</option>
+                <option [value]="null">Select</option>
+                <option *ngFor="let option of vehicleTypes" [value]="option.id">{{option.name}}</option>
             </select>
             <div [hidden]="vehicleType.valid || vehicleType.pristine" class="alert alert-danger">
                 Vehicle type is required.
@@ -51,16 +53,12 @@
                 Engine running status is required.
             </div>
         </div>
-        
-        <modification-list></modification-list>
+
         <button type="submit" class="btn btn-success" [disabled]="!vehicleForm.form.valid">Submit
         </button>
     </form>
-    
-    <button type="button" class="btn btn-warning" (click)="checkout()">TestCheckout</button>
-    <br />
-    <br />
-    <br />
-    <br />
-    
 </div>
+<br/>
+<br/>
+<br/>
+<br/>

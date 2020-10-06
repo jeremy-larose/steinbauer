@@ -1,33 +1,30 @@
-import {Component, OnInit, ViewChild} from "@angular/core";
-import { DataService } from "../shared/dataService";
+import {Component} from "@angular/core";
+import {DataService} from "../shared/dataService";
 import {Router} from "@angular/router";
 import {Vehicle} from "../shared/vehicle";
-import {VehicleType} from "../app.component";
 
 @Component({
     selector: "addVehicle",
     templateUrl: "addVehicle.component.html",
-    styleUrls: [ "addVehicle.component.css" ]
 
 })
 
 export class AddVehicle {
-    constructor( public data: DataService, public router: Router ) {
+    constructor(public data: DataService, public router: Router) {
     }
-    
-    vehicleTypes = [ 
-        'Sedan', 'Truck', 'Crossover', 'Compact', 'Semi' 
+
+    vehicleTypes = [
+        'Sedan', 'Truck', 'Crossover', 'Compact', 'Semi'
     ];
-    
+
     submitted = false;
     errorMessage: string = "";
 
     model = new Vehicle();
-    
+
     gotoCheckout() {
         this.errorMessage = "";
-        if( this.data.loginRequired ) {
-            // Force Login
+        if (this.data.loginRequired) {
             this.router.navigate(["login"])
         } else {
             this.model.vehicleId = 0;
@@ -51,7 +48,6 @@ export class AddVehicle {
             this.data.vehicle.horsepower = this.model.horsepower;
             this.data.vehicle.torque = this.model.torque;
             this.data.vehicle.modifications = this.model.modifications;
-            // Go to checkout             
 
             this.data.checkoutVehicle()
                 .subscribe(success => {

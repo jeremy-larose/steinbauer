@@ -1,0 +1,70 @@
+<h3>Manage Modifications</h3>
+
+<div class="card">
+    <div class="row modification-info">
+        <div class="col-md-6 well well-sm">
+            <h2 align="center">Add A Custom Mod</h2>
+            <form (ngSubmit)="addModToVehicle()" #modForm="ngForm" novalidate>
+                <div class="form-group">
+                    <label for="modName">Modification Name</label>
+                    <input type="text" class="form-control" id="modName"
+                           required
+                           [(ngModel)]="model.modificationName" name="modName" #modName="ngModel">
+                    <div [hidden]="modName.valid || modName.pristine" class="alert alert-danger">
+                        Modification Name is required.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="horsePower">Horsepower Gain:</label>
+                    <input type="number" class="form-control" id="horsePower"
+                           required
+                           [(ngModel)]="model.horsepower" name="horsepower" #horsePower="ngModel">
+                    <div [hidden]="horsePower.valid || horsePower.pristine" class="alert alert-danger">
+                        Horsepower value is required.
+                    </div>
+                    <label for="torque">Torque Gain:</label>
+                    <input type="number" class="form-control" id="torque"
+                           required
+                           [(ngModel)]="model.torque" name="torque" #torque="ngModel">
+                    <div [hidden]="torque.valid || torque.pristine" class="alert alert-danger">
+                        Torque value is required.
+                    </div>
+                </div>
+                <div align="center">
+                    <button type="submit" class="btn btn-success" [disabled]="!modForm.form.valid">Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 well well-sm">
+            <h3 align="center">Installed Mods</h3>
+            <table class="table table-hover">
+                <tr>
+                    <th>Mod Name</th>
+                    <th class="text-right">Horsepower</th>
+                    <th class="text-right">Torque</th>
+                    <th class="hidden-medium"></th>
+                </tr>
+                <tbody>
+                <tr *ngFor="let i of vehicle.modifications">
+                    <td><strong>{{i.modificationName}}</strong></td>
+                    <td class="text-right">{{i.horsepower}}</td>
+                    <td class="text-right">{{i.torque}}</td>
+                    <td>
+                        <button id="removeFromVehicleButton" class="btn btn-danger btn-sm pull-right"
+                                (click)="removeModFromVehicle(i.modificationId)">Remove
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th><strong>Total After Mods:</strong></th>
+                    <th class="text-right"><strong>{{calcHorsepower()}}</strong></th>
+                    <th class="text-right"><strong>{{calcTorque()}}</strong></th>
+                    <th class="hidden-medium"></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

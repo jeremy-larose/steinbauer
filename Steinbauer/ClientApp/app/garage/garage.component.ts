@@ -8,13 +8,9 @@ import {DataService} from "../shared/dataService";
 })
 
 export class Garage {
-    constructor( public data: DataService, public router: Router ) {
+    constructor(public data: DataService, public router: Router) {
         this.data = data;
     }
-    title = 'Steinbauer Garage';
 
-    /*  Deprecated method
-    onAdd() {
-        this.router.navigate(["addVehicle"])
-    } */
+    title = 'Steinbauer Garage';
 }

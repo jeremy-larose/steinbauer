@@ -1,10 +1,9 @@
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import {Observable, pipe} from "rxjs";
+import {Observable} from "rxjs";
 import { map } from "rxjs/operators";
 import { Vehicle } from "./vehicle";
 import { Modification } from "./modification";
-import { Order } from "./order";
 
 @Injectable()
 export class DataService {
@@ -16,9 +15,8 @@ export class DataService {
     private tokenExpiration: Date;
     public index: number;
     public vehicle: Vehicle = new Vehicle();
-    public order: Order = new Order();
-    
     public vehicles: Vehicle[] = [];
+    
     public modification: Modification = new Modification();
     public modifications: Modification[] = [];
     
@@ -36,19 +34,6 @@ export class DataService {
             }));
     }
     
-    checkout() {
-        if( !this.order.orderVehicle ) {
-            alert( "Vehicle not found.");
-        }
-        
-        return this.http.post( "/api/vehicles", this.order, {
-        })
-            .pipe( map( response => {
-                this.order = new Order();
-                return true;
-            }));
-    }
-
     checkoutVehicle() {
         return this.http.post( "/api/vehicles", this.vehicle,{
         })
@@ -101,6 +86,16 @@ export class DataService {
         );
     }
     
+    addMod( vehicle, id ) {
+        var url: string = "/api/vehicles/" + vehicle.vehicleId.toString() + "/mods";
+        return this.http.post( url, this.modification ).pipe(
+            map( ( response: Modification ) => {
+                this.modification = new Modification();
+                return true;
+            })
+        );
+    }
+    
     deleteVehicle( vehicle ) {
         var url: string = "/api/vehicles/" + vehicle.vehicleId.toString();
         this.http.delete( url );
@@ -120,35 +115,25 @@ export class DataService {
             }));
     }
     
-    public addToOrder( newModification: Modification )
-    {
-        var mod : Modification = new Modification();
-        
-        mod.modificationId = newModification.modificationId;
-        mod.torque = newModification.torque;
-        mod.horsepower = newModification.horsepower;
-        mod.modificationName = newModification.modificationName;
-        
-        this.order.modifications.push( mod );
+    getExistingVehicleMod( vehicleId : number, i: number ) {
+        var url: string = "/api/vehicles/" + vehicleId.toString() + "/mods/" + i.toString();
+        return this.http.get( url ).pipe( map( ( response ) => {
+            return true;
+        }));
     }
-    
-    public removeFromOrder( modification : Modification)
-    {
-        this.order.modifications.splice( this.order.modifications.indexOf( modification ), 1 );
+
+    getModsForVehicle(vehicleId: number) {
+        var url: string = "/api/vehicles/" + vehicleId.toString() + "/mods";
+        return this.http.get( url ).pipe( map( ( data: any[] ) => {
+            this.modifications = data;
+        }));
     }
-    
-    public addVehicleToOrder( newVehicle: Vehicle )
-    {
-        var veh : Vehicle = new Vehicle();
-        veh.vehicleId = newVehicle.vehicleId;
-        veh.ownerName = newVehicle.ownerName;
-        veh.engineRunning = true;
-        veh.date = new Date();
-        veh.fileName = "dodgeCharger.jpg";
-        //veh.vehicleType = 1;
-        veh.horsepower = newVehicle.horsepower;
-        veh.torque = newVehicle.torque;
-        
-        this.order.orderVehicle = veh;
+
+    addModToVehicle( vehicleId: number ) {
+        var url: string = "/api/vehicles/" + vehicleId.toString() + "/mods";
+        return this.http.post( url, this.modification ).pipe( map( ( response: Modification ) => {
+            this.modification = new Modification();
+            return true;
+        }));
     }
 }

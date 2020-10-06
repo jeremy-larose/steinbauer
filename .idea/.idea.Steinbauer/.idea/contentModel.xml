@@ -25,7 +25,6 @@
         <e p="ClientApp" t="Include">
           <e p="app" t="Include">
             <e p="add" t="Include">
-              <e p="addVehicle.component.css" t="Include" />
               <e p="addVehicle.component.html" t="Include" />
               <e p="addVehicle.component.ts" t="Include" />
             </e>
@@ -34,14 +33,11 @@
             <e p="app.component.spec.ts" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
-            <e p="checkout" t="Include">
-              <e p="checkout.component.html" t="Include" />
-              <e p="checkout.component.ts" t="Include" />
-            </e>
             <e p="edit" t="Include">
-              <e p="edit.component.css" t="Include" />
               <e p="edit.component.html" t="Include" />
               <e p="edit.component.ts" t="Include" />
+              <e p="manageMods.component.html" t="Include" />
+              <e p="manageMods.component.ts" t="Include" />
             </e>
             <e p="garage" t="Include">
               <e p="garage.component.html" t="Include" />
@@ -53,10 +49,6 @@
               <e p="vehicleList.component.html" t="Include" />
               <e p="vehicleList.component.ts" t="Include" />
             </e>
-            <e p="img" t="Include">
-              <e p="check.png" t="Include" />
-              <e p="x.png" t="Include" />
-            </e>
             <e p="login" t="Include">
               <e p="login.component.html" t="Include" />
               <e p="login.component.ts" t="Include" />
@@ -64,7 +56,6 @@
             <e p="Shared" t="Include">
               <e p="dataService.ts" t="Include" />
               <e p="modification.ts" t="Include" />
-              <e p="order.ts" t="Include" />
               <e p="vehicle.ts" t="Include" />
             </e>
           </e>
@@ -85,7 +76,6 @@
         <e p="Controllers" t="Include">
           <e p="AppController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
-          <e p="ModificationsController - Copy.cs" t="Include" />
           <e p="ModificationsController.cs" t="Include" />
           <e p="VehicleModsController.cs" t="Include" />
           <e p="VehiclesController.cs" t="Include" />
@@ -94,17 +84,9 @@
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="Entities" t="Include">
             <e p="Modification.cs" t="Include" />
-            <e p="Order.cs" t="Include" />
-            <e p="OrderItem.cs" t="Include" />
-            <e p="StoreUser.cs" t="Include" />
             <e p="Vehicle.cs" t="Include" />
           </e>
           <e p="ISteinbauerRepository.cs" t="Include" />
-          <e p="Migrations" t="Include">
-            <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
-            <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
-            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
-          </e>
           <e p="SteinbauerDbContext.cs" t="Include" />
           <e p="SteinbauerMappingProfile.cs" t="Include" />
           <e p="VehiclesRepository.cs" t="Include" />

@@ -11,7 +11,7 @@ import { Login } from "./login/login.component";
 import { Edit } from "./edit/edit.component";
 import { AddVehicle } from "./add/addVehicle.component";
 import { FormsModule } from "@angular/forms";
-import {Checkout} from "./checkout/checkout.component";
+import {ManageMods} from "./edit/manageMods.component";
 
 let routes = [
   { path: "", component: Garage },
@@ -19,8 +19,8 @@ let routes = [
   { path: "edit", component: Edit },
   { path: "addVehicle", component: AddVehicle },
     { path: "garage", component: Garage },
-    { path: "checkout", component: Checkout },
-    { path: "app", component: AppComponent }
+    { path: "app", component: AppComponent },
+    { path: "manageMods", component: ManageMods },
 ];
 
 @NgModule({
@@ -32,7 +32,7 @@ let routes = [
     Login,
     Edit,
       AddVehicle,
-      Checkout
+      ManageMods,
   ],
     imports: [
         BrowserModule,

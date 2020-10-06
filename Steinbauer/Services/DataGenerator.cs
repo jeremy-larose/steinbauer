@@ -15,7 +15,6 @@ namespace Steinbauer.Services
             using (var context =
                 new SteinbauerDbContext(serviceProvider.GetRequiredService<DbContextOptions<SteinbauerDbContext>>()))
             {
-                // Look for any vehicles.
                 if (context.Vehicles.Any())
                 {
                     return; // Data was already loaded.
@@ -66,10 +65,10 @@ namespace Steinbauer.Services
                         {
                             new Modification()
                             {
-                            Horsepower = 125,
-                            Torque = 100,
-                            ModName = "Turbocharged",
-                            ModId = 3
+                                Horsepower = 125,
+                                Torque = 100,
+                                ModName = "Turbocharged",
+                                ModId = 3
                             }
                         }
                     },
